@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Contáctanos";
+}
+
+<div class="container mt-5">
+    <div class="text-center">
+        <h2 class="text-danger fw-bold">Contáctanos</h2>
+        <p class="lead">Queremos saber de ti. Completa el formulario o escríbenos directamente.</p>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-6">
+            <form>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre completo</label>
+                    <input type="text" class="form-control" id="nombre" required />
+                </div>
+                <div class="mb-3">
+                    <label for="correo" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="correo" required />
+                </div>
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-danger w-100">Enviar mensaje</button>
+            </form>
+        </div>
+    </div>
+</div>

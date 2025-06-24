@@ -17,6 +17,17 @@ namespace MediaDashboardPro.Controllers
         {
             return View();
         }
+
+        public IActionResult UneteAlEquipo()
+        {
+            return View();
+        }
+
+        public IActionResult Contacto()
+        {
+            return View();
+        }
+
         public IActionResult UserProfile()
         {
             return View();
