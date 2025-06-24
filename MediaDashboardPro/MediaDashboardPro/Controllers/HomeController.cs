@@ -1,8 +1,8 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using TransportesMate.Models;
+using MediaDashboardPro.Models;
 
-namespace TransportesMate.Controllers
+namespace MediaDashboardPro.Controllers
 {
     public class HomeController : Controller
     {
@@ -31,7 +31,11 @@ namespace TransportesMate.Controllers
             return View();
         }
 
-
+        public IActionResult MediaDashboard()
+        {
+            return View();
+        }
+        
         public IActionResult Privacy()
         {
             return View();
