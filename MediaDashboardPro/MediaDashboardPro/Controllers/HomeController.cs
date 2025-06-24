@@ -1,8 +1,8 @@
 using System.Diagnostics;
-using MediaDashboardPro.Models;
 using Microsoft.AspNetCore.Mvc;
+using TransportesMate.Models;
 
-namespace MediaDashboardPro.Controllers
+namespace TransportesMate.Controllers
 {
     public class HomeController : Controller
     {
@@ -13,16 +13,29 @@ namespace MediaDashboardPro.Controllers
             _logger = logger;
         }
 
+        public IActionResult Login()
+        {
+            return View();
+        }
+        public IActionResult UserProfile()
+        {
+            return View();
+        }
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult ConfigurationPanel()
         {
             return View();
         }
 
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
