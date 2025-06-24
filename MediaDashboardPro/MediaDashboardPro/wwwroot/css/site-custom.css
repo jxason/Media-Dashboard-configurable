@@ -1,0 +1,146 @@
+﻿/*
+    Modificación realizada por Jason
+    Fecha: 10/06/2025
+    Archivo: site-custom.css
+    Descripción general:
+    Este archivo contiene los estilos personalizados para adaptar el diseño base de Bootstrap al estilo visual
+    de camiones Mack Bulldog con inspiración en la interfaz de EPA.
+*/
+
+/* ==========================================
+   Sección: Estilo General del <body>
+   Afecta: Etiqueta <body> del layout principal
+   Propósito: Define la fuente y color de fondo base
+   ========================================== */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ffffff; /* blanco puro para contraste con rojo */
+}
+
+/* ==========================================
+   Sección: Banner Superior
+   Selector: .top-banner
+   Afecta: <div class="top-banner">
+   Propósito: Barra informativa superior con mensaje institucional
+   ========================================== */
+.top-banner {
+    background-color: #ffe5e5; /* rojo claro (inspirado en EPA) */
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    color: #b30000; /* rojo fuerte estilo Mack */
+}
+
+/* ==========================================
+   Sección: Barra de Navegación Principal
+   Selector: .navbar-custom
+   Afecta: <nav class="navbar navbar-custom">
+   Propósito: Personalizar navbar con rojo Mack y textos blancos
+   ========================================== */
+.navbar-custom {
+    background-color: #b30000; /* rojo dominante Mack */
+}
+
+    .navbar-custom .nav-link,
+    .navbar-custom .navbar-brand {
+        color: #ffffff !important;
+        font-weight: 500;
+    }
+
+        .navbar-custom .nav-link:hover {
+            text-decoration: underline;
+        }
+
+/* ==========================================
+   Sección: Pie de página
+   Selector: footer
+   Afecta: <footer> en layout
+   Propósito: Estética neutra, sin colores fuertes
+   ========================================== */
+footer {
+    background-color: #f8f9fa; /* gris claro predeterminado de Bootstrap */
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #6c757d; /* gris oscuro neutro para el texto */
+    border-top: 1px solid #dee2e6; /* línea divisoria superior */
+}
+
+/*
+    Modificación realizada por Jason
+    Fecha: 10/06/2025
+    Sección: Página de inicio - Estilo futurista (Index.cshtml)
+    Afecta: <div class="hero-welcome"> y sus hijos
+    Descripción:
+    Se centra verticalmente el contenido y se aplica una estética futurista y limpia.
+*/
+
+.hero-welcome {
+    padding: 100px 20px;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    margin-bottom: 100px;
+    transition: all 0.3s ease-in-out;
+}
+
+    .hero-welcome:hover {
+        transform: scale(1.01);
+        box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
+    }
+
+    .hero-welcome h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: #b30000; /* rojo Mack */
+        margin-bottom: 20px;
+    }
+
+    .hero-welcome p {
+        font-size: 1.3rem;
+        color: #555555;
+        margin-bottom: 30px;
+    }
+
+.explore-btn {
+    background-color: #b30000;
+    border-color: #b30000;
+    font-weight: bold;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+}
+
+    .explore-btn:hover {
+        background-color: #8c0000;
+        border-color: #8c0000;
+    }
+
+/* ==========================================
+   Sección: Sticky Footer
+   Selector: html, body, .container
+   Afecta: estructura general de la página
+   Autor: Jason
+   Fecha: 10/06/2025
+   Propósito:
+   - Empujar el footer al fondo de la ventana si hay poco contenido.
+   - Aplicar estructura vertical con flexbox.
+   ========================================== */
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+}

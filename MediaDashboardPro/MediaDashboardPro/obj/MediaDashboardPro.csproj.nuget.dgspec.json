@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jsolo\\source\\repos\\MediaDashboardPro\\MediaDashboardPro\\MediaDashboardPro.csproj": {}
+    "C:\\Users\\jsolo\\Programacion\\GitHubProjects\\MediaDashboardPro\\Media-Dashboard-configurable\\MediaDashboardPro\\MediaDashboardPro\\MediaDashboardPro.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jsolo\\source\\repos\\MediaDashboardPro\\MediaDashboardPro\\MediaDashboardPro.csproj": {
+    "C:\\Users\\jsolo\\Programacion\\GitHubProjects\\MediaDashboardPro\\Media-Dashboard-configurable\\MediaDashboardPro\\MediaDashboardPro\\MediaDashboardPro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jsolo\\source\\repos\\MediaDashboardPro\\MediaDashboardPro\\MediaDashboardPro.csproj",
+        "projectUniqueName": "C:\\Users\\jsolo\\Programacion\\GitHubProjects\\MediaDashboardPro\\Media-Dashboard-configurable\\MediaDashboardPro\\MediaDashboardPro\\MediaDashboardPro.csproj",
         "projectName": "MediaDashboardPro",
-        "projectPath": "C:\\Users\\jsolo\\source\\repos\\MediaDashboardPro\\MediaDashboardPro\\MediaDashboardPro.csproj",
+        "projectPath": "C:\\Users\\jsolo\\Programacion\\GitHubProjects\\MediaDashboardPro\\Media-Dashboard-configurable\\MediaDashboardPro\\MediaDashboardPro\\MediaDashboardPro.csproj",
         "packagesPath": "C:\\Users\\jsolo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jsolo\\source\\repos\\MediaDashboardPro\\MediaDashboardPro\\obj\\",
+        "outputPath": "C:\\Users\\jsolo\\Programacion\\GitHubProjects\\MediaDashboardPro\\Media-Dashboard-configurable\\MediaDashboardPro\\MediaDashboardPro\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
