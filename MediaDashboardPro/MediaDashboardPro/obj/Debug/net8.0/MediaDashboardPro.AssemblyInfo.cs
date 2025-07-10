@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MediaDashboardPro")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cae8347439daaa9584fc5aa34a95cfc0c30af181")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a1dd2c47cbc22019248273690c8a334110b475e5")]
 [assembly: System.Reflection.AssemblyProductAttribute("MediaDashboardPro")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MediaDashboardPro")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

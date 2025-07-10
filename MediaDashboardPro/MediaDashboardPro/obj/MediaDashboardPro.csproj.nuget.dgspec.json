@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jsolo\\Programacion\\GitHubProjects\\MediaDashboardPro\\Media-Dashboard-configurable\\MediaDashboardPro\\MediaDashboardPro\\MediaDashboardPro.csproj": {}
+    "C:\\Users\\Daniel\\Documents\\GitHub\\Media-Dashboard-configurable\\MediaDashboardPro\\MediaDashboardPro\\MediaDashboardPro.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jsolo\\Programacion\\GitHubProjects\\MediaDashboardPro\\Media-Dashboard-configurable\\MediaDashboardPro\\MediaDashboardPro\\MediaDashboardPro.csproj": {
+    "C:\\Users\\Daniel\\Documents\\GitHub\\Media-Dashboard-configurable\\MediaDashboardPro\\MediaDashboardPro\\MediaDashboardPro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jsolo\\Programacion\\GitHubProjects\\MediaDashboardPro\\Media-Dashboard-configurable\\MediaDashboardPro\\MediaDashboardPro\\MediaDashboardPro.csproj",
+        "projectUniqueName": "C:\\Users\\Daniel\\Documents\\GitHub\\Media-Dashboard-configurable\\MediaDashboardPro\\MediaDashboardPro\\MediaDashboardPro.csproj",
         "projectName": "MediaDashboardPro",
-        "projectPath": "C:\\Users\\jsolo\\Programacion\\GitHubProjects\\MediaDashboardPro\\Media-Dashboard-configurable\\MediaDashboardPro\\MediaDashboardPro\\MediaDashboardPro.csproj",
-        "packagesPath": "C:\\Users\\jsolo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jsolo\\Programacion\\GitHubProjects\\MediaDashboardPro\\Media-Dashboard-configurable\\MediaDashboardPro\\MediaDashboardPro\\obj\\",
+        "projectPath": "C:\\Users\\Daniel\\Documents\\GitHub\\Media-Dashboard-configurable\\MediaDashboardPro\\MediaDashboardPro\\MediaDashboardPro.csproj",
+        "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Daniel\\Documents\\GitHub\\Media-Dashboard-configurable\\MediaDashboardPro\\MediaDashboardPro\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jsolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,11 +44,21 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -68,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

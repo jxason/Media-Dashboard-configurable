@@ -17,7 +17,7 @@ namespace MediaDashboardPro.Controllers
         {
             return View();
         }
-
+        
         public IActionResult UneteAlEquipo()
         {
             return View();
