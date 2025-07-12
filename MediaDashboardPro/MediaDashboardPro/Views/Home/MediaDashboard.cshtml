@@ -41,6 +41,9 @@
             <div class="nav-item">
                 <i>⚙️</i> Configuración
             </div>
+            <div class="nav-item">  
+                           <i>➕</i> Añadir Dashboard  
+                       </div>
         </nav>
 
         <!-- Main content -->
@@ -134,19 +137,188 @@
             </div>
 
             <!-- Video destacado -->
-            <div class="card">
-                <div class="card-header">
-                    <span>Video destacado</span>
-                    <span>🎥</span>
-                </div>
-                <div class="card-body">
-                    <div class="video-container">
-                        <div class="video-placeholder">
-                            VIDEO DESTACADO DEL MES
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @{  
+               ViewData["Title"] = "Media dashboard";  
+               Layout = null;  
+            }  
+             
+            <!DOCTYPE html>  
+            <html lang="es">  
+            <head>  
+               <meta charset="UTF-8">  
+               <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+               <title>Media Dashboard</title>  
+               <link rel="stylesheet" href="~/css/dashboard-view.css">  
+            </head>  
+            <body>  
+               <div class="dashboard">  
+                   <!-- Header -->  
+                   <header class="header">  
+                       <h1>Media Dashboard</h1>  
+                   </header>  
+             
+                   <!-- Sidebar -->  
+                   <nav class="sidebar">  
+                       <div class="nav-item">  
+                           <i>📊</i> Dashboard  
+                       </div>  
+                       <div class="nav-item">  
+                           <i>📈</i> Analíticas  
+                       </div>  
+                       <div class="nav-item">  
+                           <i>🌦️</i> Clima  
+                       </div>  
+                       <div class="nav-item">  
+                           <i>💰</i> Finanzas  
+                       </div>  
+                       <div class="nav-item">  
+                           <i>📰</i> Noticias  
+                       </div>  
+                       <div class="nav-item">  
+                           <i>🎥</i> Medios  
+                       </div>  
+                       <div class="nav-item">  
+                           <i>⚙️</i> Configuración  
+                       </div>  
+                       <div class="nav-item">  
+                           <i>➕</i> Añadir Dashboard  
+                       </div>  
+                   </nav>  
+             
+                   <!-- Main content -->  
+                   <main class="main-content">  
+                       <!-- Gráfico 1 -->  
+                       <div class="card">  
+                           <div class="card-header">  
+                               <span>Tráfico del sitio</span>  
+                               <span>📊</span>  
+                           </div>  
+                           <div class="card-body">  
+                               <div class="chart-container">  
+                                   <div class="chart" id="trafficChart">  
+                                       <!-- Las barras se añadirán con JS -->  
+                                   </div>  
+                               </div>  
+                           </div>  
+                       </div>  
+             
+                       <!-- Tipos de cambio -->  
+                       <div class="card">  
+                           <div class="card-header">  
+                               <span>Tipos de cambio</span>  
+                               <span>💰</span>  
+                           </div>  
+                           <div class="card-body">  
+                               <div class="exchange-rates">  
+                                   <div class="currency">  
+                                       <span class="currency-name">USD</span>  
+                                       <span>1.00 USD = 0.85 EUR</span>  
+                                   </div>  
+                                   <div class="currency">  
+                                       <span class="currency-name">EUR</span>  
+                                       <span>1.00 EUR = 1.18 USD</span>  
+                                   </div>  
+                                   <div class="currency">  
+                                       <span class="currency-name">GBP</span>  
+                                       <span>1.00 GBP = 1.37 USD</span>  
+                                   </div>  
+                                   <div class="currency">  
+                                       <span class="currency-name">JPY</span>  
+                                       <span>100 JPY = 0.86 USD</span>  
+                                   </div>  
+                               </div>  
+                           </div>  
+                       </div>  
+             
+                       <!-- Widget del clima -->  
+                       <div class="card">  
+                           <div class="card-header">  
+                               <span>Clima actual</span>  
+                               <span>🌤️</span>  
+                           </div>  
+                           <div class="card-body weather-widget">  
+                               <h2>Ciudad de México</h2>  
+                               <div class="weather-temp">24°C</div>  
+                               <div>Parcialmente nublado</div>  
+                               <div class="weather-details">  
+                                   <div class="weather-detail">  
+                                       <div>Humedad</div>  
+                                       <div>65%</div>  
+                                   </div>  
+                                   <div class="weather-detail">  
+                                       <div>Viento</div>  
+                                       <div>12 km/h</div>  
+                                   </div>  
+                               </div>  
+                           </div>  
+                       </div>  
+             
+                       <!-- Noticias -->  
+                       <div class="card">  
+                           <div class="card-header">  
+                               <span>Últimas noticias</span>  
+                               <span>📰</span>  
+                           </div>  
+                           <div class="card-body">  
+                               <div class="news-item">  
+                                   <div class="news-title">La tecnología IA revoluciona el sector salud</div>  
+                                   <div class="news-source">TechNews - Hace 2 horas</div>  
+                               </div>  
+                               <div class="news-item">  
+                                   <div class="news-title">Nuevas regulaciones para criptomonedas en 2023</div>  
+                                   <div class="news-source">Finanzas Hoy - Hace 4 horas</div>  
+                               </div>  
+                               <div class="news-item">  
+                                   <div class="news-title">Incremento en el uso de energías renovables</div>  
+                                   <div class="news-source">EcoMundo - Ayer</div>  
+                               </div>  
+                           </div>  
+                       </div>  
+             
+                       <!-- Video destacado -->  
+                       <div class="card">  
+                           <div class="card-header">  
+                               <span>Video destacado</span>  
+                               <span>🎥</span>  
+                           </div>  
+                           <div class="card-body">  
+                               <div class="video-container">  
+                                   <div class="video-placeholder">  
+                                       VIDEO DESTACADO DEL MES  
+                                   </div>  
+                               </div>  
+                           </div>  
+                       </div>  
+             
+                       <!-- RSS Feed -->  
+                       <div class="card">  
+                           <div class="card-header">  
+                               <span>Feed RSS</span>  
+                               <span>📡</span>  
+                           </div>  
+                           <div class="card-body">  
+                               <div style="display: flex; flex-direction: column; gap: 10px;">  
+                                   <div style="display: flex; gap: 10px; align-items: center;">  
+                                       <div style="width: 40px; height: 40px; background-color: #eee; border-radius: 5px; display: flex; justify-content: center; align-items: center;">📰</div>  
+                                       <div>  
+                                           <div style="font-weight: 600;">Actualización de API v3.2</div>  
+                                           <div style="font-size: 0.8rem; color: #7f8c8d;">Hace 1 día</div>  
+                                       </div>  
+                                   </div>  
+                                   <div style="display: flex; gap: 10px; align-items: center;">  
+                                       <div style="width: 40px; height: 40px; background-color: #eee; border-radius: 5px; display: flex; justify-content: center; align-items: center;">📊</div>  
+                                       <div>  
+                                           <div style="font-weight: 600;">Nuevas métricas disponibles</div>  
+                                           <div style="font-size: 0.8rem; color: #7f8c8d;">Hace 3 días</div>  
+                                       </div>  
+                                   </div>  
+                               </div>  
+                           </div>  
+                       </div>  
+                   </main>  
+               </div>  
+            </body>  
+            </html>
 
             <!-- RSS Feed -->
             <div class="card">

@@ -1,7 +1,24 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\jsolo\\source\\repos\\MediaDashboardPro\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\sebaw\\OneDrive\\Universidad\\Cuatri 8\\Advanced Programming web\\Proyecto_final_Widget_creator\\MediaDashboardPro\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DF20C2D1-05DB-4CFF-B2F6-62041F9DA125}|MediaDashboardPro\\MediaDashboardPro.csproj|c:\\users\\sebaw\\onedrive\\universidad\\cuatri 8\\advanced programming web\\proyecto_final_widget_creator\\mediadashboardpro\\mediadashboardpro\\views\\home\\mediadashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DF20C2D1-05DB-4CFF-B2F6-62041F9DA125}|MediaDashboardPro\\MediaDashboardPro.csproj|solutionrelative:mediadashboardpro\\views\\home\\mediadashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF20C2D1-05DB-4CFF-B2F6-62041F9DA125}|MediaDashboardPro\\MediaDashboardPro.csproj|c:\\users\\sebaw\\onedrive\\universidad\\cuatri 8\\advanced programming web\\proyecto_final_widget_creator\\mediadashboardpro\\mediadashboardpro\\views\\home\\contacto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DF20C2D1-05DB-4CFF-B2F6-62041F9DA125}|MediaDashboardPro\\MediaDashboardPro.csproj|solutionrelative:mediadashboardpro\\views\\home\\contacto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF20C2D1-05DB-4CFF-B2F6-62041F9DA125}|MediaDashboardPro\\MediaDashboardPro.csproj|c:\\users\\sebaw\\onedrive\\universidad\\cuatri 8\\advanced programming web\\proyecto_final_widget_creator\\mediadashboardpro\\mediadashboardpro\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF20C2D1-05DB-4CFF-B2F6-62041F9DA125}|MediaDashboardPro\\MediaDashboardPro.csproj|solutionrelative:mediadashboardpro\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF20C2D1-05DB-4CFF-B2F6-62041F9DA125}|MediaDashboardPro\\MediaDashboardPro.csproj|c:\\users\\sebaw\\onedrive\\universidad\\cuatri 8\\advanced programming web\\proyecto_final_widget_creator\\mediadashboardpro\\mediadashboardpro\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF20C2D1-05DB-4CFF-B2F6-62041F9DA125}|MediaDashboardPro\\MediaDashboardPro.csproj|solutionrelative:mediadashboardpro\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +26,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MediaDashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\sebaw\\OneDrive\\Universidad\\Cuatri 8\\Advanced Programming web\\Proyecto_final_Widget_creator\\MediaDashboardPro\\MediaDashboardPro\\Views\\Home\\MediaDashboard.cshtml",
+              "RelativeDocumentMoniker": "MediaDashboardPro\\Views\\Home\\MediaDashboard.cshtml",
+              "ToolTip": "C:\\Users\\sebaw\\OneDrive\\Universidad\\Cuatri 8\\Advanced Programming web\\Proyecto_final_Widget_creator\\MediaDashboardPro\\MediaDashboardPro\\Views\\Home\\MediaDashboard.cshtml",
+              "RelativeToolTip": "MediaDashboardPro\\Views\\Home\\MediaDashboard.cshtml",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAtwEwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-30T01:00:12.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Contacto.cshtml",
+              "DocumentMoniker": "C:\\Users\\sebaw\\OneDrive\\Universidad\\Cuatri 8\\Advanced Programming web\\Proyecto_final_Widget_creator\\MediaDashboardPro\\MediaDashboardPro\\Views\\Home\\Contacto.cshtml",
+              "RelativeDocumentMoniker": "MediaDashboardPro\\Views\\Home\\Contacto.cshtml",
+              "ToolTip": "C:\\Users\\sebaw\\OneDrive\\Universidad\\Cuatri 8\\Advanced Programming web\\Proyecto_final_Widget_creator\\MediaDashboardPro\\MediaDashboardPro\\Views\\Home\\Contacto.cshtml",
+              "RelativeToolTip": "MediaDashboardPro\\Views\\Home\\Contacto.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-30T00:59:40.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\sebaw\\OneDrive\\Universidad\\Cuatri 8\\Advanced Programming web\\Proyecto_final_Widget_creator\\MediaDashboardPro\\MediaDashboardPro\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "MediaDashboardPro\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\sebaw\\OneDrive\\Universidad\\Cuatri 8\\Advanced Programming web\\Proyecto_final_Widget_creator\\MediaDashboardPro\\MediaDashboardPro\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "MediaDashboardPro\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T00:56:40.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\sebaw\\OneDrive\\Universidad\\Cuatri 8\\Advanced Programming web\\Proyecto_final_Widget_creator\\MediaDashboardPro\\MediaDashboardPro\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "MediaDashboardPro\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\sebaw\\OneDrive\\Universidad\\Cuatri 8\\Advanced Programming web\\Proyecto_final_Widget_creator\\MediaDashboardPro\\MediaDashboardPro\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "MediaDashboardPro\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T00:56:34.206Z",
+              "EditorCaption": ""
             }
           ]
         }

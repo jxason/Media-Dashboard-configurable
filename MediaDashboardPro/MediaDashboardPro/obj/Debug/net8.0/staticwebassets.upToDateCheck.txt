@@ -1,4 +1,9 @@
+wwwroot\css\configuration-panel-view.css
+wwwroot\css\dashboard-view.css
+wwwroot\css\login-view.css
 wwwroot\css\site.css
+wwwroot\css\site-custom.css
+wwwroot\css\user-profile-view.css
 wwwroot\favicon.ico
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
