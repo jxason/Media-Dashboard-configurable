@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\sebaw\\OneDrive\\Universidad\\Cuatri 8\\Advanced Programming web\\Proyecto_final_Widget_creator\\MediaDashboardPro\\MediaDashboardPro\\MediaDashboardPro.csproj": {}
   },
   "projects": {
@@ -12,12 +13,29 @@
         "projectPath": "C:\\Users\\sebaw\\OneDrive\\Universidad\\Cuatri 8\\Advanced Programming web\\Proyecto_final_Widget_creator\\MediaDashboardPro\\MediaDashboardPro\\MediaDashboardPro.csproj",
         "packagesPath": "C:\\Users\\sebaw\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\sebaw\\OneDrive\\Universidad\\Cuatri 8\\Advanced Programming web\\Proyecto_final_Widget_creator\\MediaDashboardPro\\MediaDashboardPro\\obj\\",
+=======
+    "C:\\Users\\Daniel\\Documents\\GitHub\\Media-Dashboard-configurable\\MediaDashboardPro\\MediaDashboardPro\\MediaDashboardPro.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Daniel\\Documents\\GitHub\\Media-Dashboard-configurable\\MediaDashboardPro\\MediaDashboardPro\\MediaDashboardPro.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Daniel\\Documents\\GitHub\\Media-Dashboard-configurable\\MediaDashboardPro\\MediaDashboardPro\\MediaDashboardPro.csproj",
+        "projectName": "MediaDashboardPro",
+        "projectPath": "C:\\Users\\Daniel\\Documents\\GitHub\\Media-Dashboard-configurable\\MediaDashboardPro\\MediaDashboardPro\\MediaDashboardPro.csproj",
+        "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Daniel\\Documents\\GitHub\\Media-Dashboard-configurable\\MediaDashboardPro\\MediaDashboardPro\\obj\\",
+>>>>>>> 3d713c9f07244c3246c86e3314eb4300ce24d87d
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\sebaw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 3d713c9f07244c3246c86e3314eb4300ce24d87d
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,11 +62,25 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
+<<<<<<< HEAD
         "SdkAnalysisLevel": "9.0.100"
+=======
+        "SdkAnalysisLevel": "9.0.300"
+>>>>>>> 3d713c9f07244c3246c86e3314eb4300ce24d87d
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -68,7 +100,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+>>>>>>> 3d713c9f07244c3246c86e3314eb4300ce24d87d
         }
       }
     }
