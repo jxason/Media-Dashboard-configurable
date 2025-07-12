@@ -10,6 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Dashboard</title>
     <link rel="stylesheet" href="~/css/dashboard-view.css">
+    <!-- Incluye Chart.js y Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <div class="dashboard">
@@ -53,9 +56,7 @@
                 </div>
                 <div class="card-body">
                     <div class="chart-container">
-                        <div class="chart" id="trafficChart">
-                            <!-- Las barras se añadirán con JS -->
-                        </div>
+                        <div class="chart" id="trafficChart"></div>
                     </div>
                 </div>
             </div>
@@ -175,5 +176,61 @@
             </div>
         </main>
     </div>
+
+    <!-- Script para el gráfico -->
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                // 1. Fetch a API de CoinGecko (ejemplo: precio de Bitcoin últimos 7 días)
+                const response = await axios.get('https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=7');
+                const data = response.data;
+
+                // 2. Procesar datos para el gráfico
+                const prices = data.prices.map(price => price[1]); // Extrae precios
+                const dates = data.prices.map(price =>
+                    new Date(price[0]).toLocaleDateString('es-MX', { weekday: 'short' }) // Formatea fechas
+                );
+
+                // 3. Crear gráfico de barras
+                const ctx = document.getElementById('trafficChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: dates,
+                        datasets: [{
+                            label: 'Precio de Bitcoin (USD)',
+                            data: prices,
+                            backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Precio de Bitcoin (7 días)',
+                                font: { size: 16 }
+                            },
+                            legend: { display: false }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: false,
+                                title: { display: true, text: 'USD' }
+                            }
+                        }
+                    }
+                });
+
+            } catch (error) {
+                console.error("Error al cargar datos:", error);
+                document.getElementById('trafficChart').innerHTML = `
+                    <p class="error">Error al cargar el gráfico. Recarga la página.</p>
+                `;
+            }
+        });
+    </script>
 </body>
 </html>

@@ -57,7 +57,9 @@ body {
    Afecta: <footer> en layout
    Propósito: Estética neutra, sin colores fuertes
    ========================================== */
+
 footer {
+    background-image: url('/img/lo-fi-aesthetic-1790-x-1080-wallpaper-9j5qx1zg5y3l9vqa.jpg');
     background-color: #f8f9fa; /* gris claro predeterminado de Bootstrap */
     padding: 15px 0;
     text-align: center;

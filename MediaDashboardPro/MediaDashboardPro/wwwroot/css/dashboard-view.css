@@ -7,6 +7,7 @@
 }
 
 body {
+    background-image: url('/img/lo-fi-aesthetic-1790-x-1080-wallpaper-9j5qx1zg5y3l9vqa.jpg');
     background-color: #f5f7fa;
     color: #333;
     line-height: 1.6;
@@ -69,12 +70,13 @@ body {
 }
 
 /* Cards */
-.card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+.card {  
+   background-color: rgba(0,0,0,0.8);
+ color: snow ;
+   border-radius: 10px;  
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+   overflow: hidden;  
+   transition: transform 0.3s, box-shadow 0.3s;  
 }
 
     .card:hover {
