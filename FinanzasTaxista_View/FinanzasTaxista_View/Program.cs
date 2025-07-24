@@ -1,7 +1,15 @@
+
+
+using FinanzasTaxista_View.Service;
 var builder = WebApplication.CreateBuilder(args);
 
+
+//debuggin config
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddHttpClient<UsuariosService>();
 
 var app = builder.Build();
 

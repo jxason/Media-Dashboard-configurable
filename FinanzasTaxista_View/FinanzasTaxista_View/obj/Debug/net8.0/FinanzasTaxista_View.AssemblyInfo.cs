@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FinanzasTaxista_View")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5f1adc5f0bcac7c6e0916f12de6836bd26366adc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e4643ffe967d22935db2952644e273457894c831")]
 [assembly: System.Reflection.AssemblyProductAttribute("FinanzasTaxista_View")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FinanzasTaxista_View")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -71,21 +71,46 @@ CREATE TABLE balance_diario (
   id INT IDENTITY(1,1) PRIMARY KEY,
   id_usuario INT NOT NULL,
   id_dia INT NOT NULL,
-  utilidad AS (
-    (
-      SELECT ISNULL(SUM(v.monto), 0)
-      FROM viaje v
-      WHERE v.id_usuario = balance_diario.id_usuario AND v.id_dia = balance_diario.id_dia
-    )
-    -
-    (
-      SELECT ISNULL(SUM(g.monto), 0)
-      FROM gasto g
-      WHERE g.id_usuario = balance_diario.id_usuario AND g.id_dia = balance_diario.id_dia
-    )
-  ) PERSISTED,
+  utilidad VARCHAR(200) NOT NULL ,
   FOREIGN KEY (id_usuario) REFERENCES usuario(id),
   FOREIGN KEY (id_dia) REFERENCES dia_trabajo(id),
   UNIQUE (id_usuario, id_dia)
 );
 GO
+
+
+
+
+
+-- INSERTS
+
+--ROl
+INSERT INTO rol (nombre_rol)
+VALUES 
+  ('Administrador'),
+  ('Usuario'),
+  ('Moderador');
+
+
+
+
+
+
+
+--USER
+INSERT INTO usuario (
+  id_rol,
+  nombre_usuario,
+  apellido1,
+  apellido2,
+  correo_electronico,
+  contrasena
+)
+VALUES (
+  1, -- id_rol
+  'juanperez', -- nombre_usuario
+  'Pérez', -- apellido1
+  'González', -- apellido2
+  'juan.perez@example.com', -- correo_electronico
+  '1234Segura!' -- contrasena (idealmente encriptada)
+);
