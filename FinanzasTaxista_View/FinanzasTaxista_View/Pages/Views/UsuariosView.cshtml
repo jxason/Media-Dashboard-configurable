@@ -1,10 +1,8 @@
 ﻿@page
 @model FinanzasTaxista_View.Pages.Views.UsuariosViewModel
 @{
-    ViewData["Title"] = "Lista de Usuarios";
+    ViewData["Title"] = "Lista de usuarios";
 }
-
-
 
 <table class="table">  
   <thead>  
@@ -22,16 +20,16 @@
         @foreach (var user in Model._Usuarios)
         {  
           <tr>  
-              <td>@user.Id</td>  
+              <td>@user.id</td>  
               <td>@user.nombre_usuario</td>  
               <td>@user.apellido1</td>  
               <td>@user.apellido2</td>  
               <td>@user.correo_electronico</td>  
               <td>@user.id_rol</td>  
               <td>  
-                  <a class="btn btn-danger" asp-page="CRUD/UsersCRUD/Delete" asp-route-id="@user.Id" role="button">Delete</a>  
-                  <a class="btn btn-success" asp-page="CRUD/UsersCRUD/Update" asp-route-id="@user.Id" role="button">Edit</a>  
-              </td>  
+                  <a class="btn btn-danger" asp-page="CRUD/UsersCRUD/Delete" asp-route-id="@user.id" role="button">Eliminar</a>
+                  <a class="btn btn-success" asp-page="/Views/UsuarioCRUD/Editar" asp-route-id="@user.id" role="button">Editar</a>
+                </td>  
           </tr>  
       }  
   </tbody>  

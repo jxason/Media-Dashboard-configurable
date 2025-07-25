@@ -8,16 +8,16 @@ namespace FinanzasTaxista_View.Pages.Views
 {
     public class UsuariosViewModel : PageModel
     {
-     private readonly UsuariosService _usuariosService;
+     private readonly UsuarioService _usuariosService;
       
 
-    public UsuariosViewModel(UsuariosService usuariosService)
+    public UsuariosViewModel(UsuarioService usuariosService)
         {
             _usuariosService = usuariosService;
         }
 
         //lista de usuarios que se despliega en la VIEW
-        public List<UsuariosModels> _Usuarios { get; set; } = new List<UsuariosModels>();
+        public List<UsuarioModel> _Usuarios { get; set; } = new List<UsuarioModel>();
 
         //Metodo que se ejecuta al cargar la pagina
         public async Task OnGetAsync()

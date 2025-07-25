@@ -9,45 +9,53 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FinanzasTaxista_View
 build_property.RootNamespace = FinanzasTaxista_View
-build_property.ProjectDir = C:\Users\sebaw\OneDrive\Universidad\Cuatri 8\Advanced Programming web\Proyecto_final_Widget_creator\FinanzasTaxista_View\FinanzasTaxista_View\
+build_property.ProjectDir = C:\Users\Daniel\Documents\GitHub\Media-Dashboard-configurable\FinanzasTaxista_View\FinanzasTaxista_View\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\sebaw\OneDrive\Universidad\Cuatri 8\Advanced Programming web\Proyecto_final_Widget_creator\FinanzasTaxista_View\FinanzasTaxista_View
+build_property.MSBuildProjectDirectory = C:\Users\Daniel\Documents\GitHub\Media-Dashboard-configurable\FinanzasTaxista_View\FinanzasTaxista_View
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/sebaw/OneDrive/Universidad/Cuatri 8/Advanced Programming web/Proyecto_final_Widget_creator/FinanzasTaxista_View/FinanzasTaxista_View/Pages/Error.cshtml]
+[C:/Users/Daniel/Documents/GitHub/Media-Dashboard-configurable/FinanzasTaxista_View/FinanzasTaxista_View/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sebaw/OneDrive/Universidad/Cuatri 8/Advanced Programming web/Proyecto_final_Widget_creator/FinanzasTaxista_View/FinanzasTaxista_View/Pages/Index.cshtml]
+[C:/Users/Daniel/Documents/GitHub/Media-Dashboard-configurable/FinanzasTaxista_View/FinanzasTaxista_View/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sebaw/OneDrive/Universidad/Cuatri 8/Advanced Programming web/Proyecto_final_Widget_creator/FinanzasTaxista_View/FinanzasTaxista_View/Pages/Privacy.cshtml]
+[C:/Users/Daniel/Documents/GitHub/Media-Dashboard-configurable/FinanzasTaxista_View/FinanzasTaxista_View/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sebaw/OneDrive/Universidad/Cuatri 8/Advanced Programming web/Proyecto_final_Widget_creator/FinanzasTaxista_View/FinanzasTaxista_View/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Daniel/Documents/GitHub/Media-Dashboard-configurable/FinanzasTaxista_View/FinanzasTaxista_View/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sebaw/OneDrive/Universidad/Cuatri 8/Advanced Programming web/Proyecto_final_Widget_creator/FinanzasTaxista_View/FinanzasTaxista_View/Pages/Views/UsuariosView.cshtml]
+[C:/Users/Daniel/Documents/GitHub/Media-Dashboard-configurable/FinanzasTaxista_View/FinanzasTaxista_View/Pages/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Daniel/Documents/GitHub/Media-Dashboard-configurable/FinanzasTaxista_View/FinanzasTaxista_View/Pages/Views/UsuarioCRUD/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcVXN1YXJpb0NSVURcRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Daniel/Documents/GitHub/Media-Dashboard-configurable/FinanzasTaxista_View/FinanzasTaxista_View/Pages/Views/UsuariosView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcVXN1YXJpb3NWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sebaw/OneDrive/Universidad/Cuatri 8/Advanced Programming web/Proyecto_final_Widget_creator/FinanzasTaxista_View/FinanzasTaxista_View/Pages/_ViewImports.cshtml]
+[C:/Users/Daniel/Documents/GitHub/Media-Dashboard-configurable/FinanzasTaxista_View/FinanzasTaxista_View/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sebaw/OneDrive/Universidad/Cuatri 8/Advanced Programming web/Proyecto_final_Widget_creator/FinanzasTaxista_View/FinanzasTaxista_View/Pages/_ViewStart.cshtml]
+[C:/Users/Daniel/Documents/GitHub/Media-Dashboard-configurable/FinanzasTaxista_View/FinanzasTaxista_View/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sebaw/OneDrive/Universidad/Cuatri 8/Advanced Programming web/Proyecto_final_Widget_creator/FinanzasTaxista_View/FinanzasTaxista_View/Pages/Shared/_Layout.cshtml]
+[C:/Users/Daniel/Documents/GitHub/Media-Dashboard-configurable/FinanzasTaxista_View/FinanzasTaxista_View/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-vg0jd01po1

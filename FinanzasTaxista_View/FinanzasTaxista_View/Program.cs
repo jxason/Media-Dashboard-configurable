@@ -9,7 +9,10 @@ builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddHttpClient<UsuariosService>();
+builder.Services.AddHttpClient<UsuarioService>();
+builder.Services.AddHttpClient<RolService>();
+builder.Services.AddHttpClient<DiaTrabajoService>();
+builder.Services.AddHttpClient<CategoriaService>();
 
 var app = builder.Build();
 

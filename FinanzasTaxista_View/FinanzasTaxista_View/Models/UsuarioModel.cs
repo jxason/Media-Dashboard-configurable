@@ -1,14 +1,8 @@
-﻿
-using System.ComponentModel.DataAnnotations;
-namespace FinanzasTaxista_Api.Models
+﻿namespace FinanzasTaxista_View.Models
 {
-    public class Usuarios
+    public class UsuarioModel
     {
-
-        [Key]
-
-        public int Id { get; set; } 
-
+        public int id { get; set; }
 
         public string nombre_usuario { get; set; } = string.Empty;
 
@@ -20,7 +14,8 @@ namespace FinanzasTaxista_Api.Models
 
         public string contrasena { get; set; } = string.Empty;
 
-        public int id_rol { get; set; } 
+        public int id_rol { get; set; }
+
 
     }
 }

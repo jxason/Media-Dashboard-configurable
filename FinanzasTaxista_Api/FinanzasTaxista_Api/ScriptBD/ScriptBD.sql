@@ -78,26 +78,15 @@ CREATE TABLE balance_diario (
 );
 GO
 
+-- Inserciones
 
-
-
-
--- INSERTS
-
---ROl
+-- Inserción a la tabla rol.
 INSERT INTO rol (nombre_rol)
 VALUES 
   ('Administrador'),
-  ('Usuario'),
-  ('Moderador');
+  ('Taxista');
 
-
-
-
-
-
-
---USER
+-- Inserción a la tabla usuario.
 INSERT INTO usuario (
   id_rol,
   nombre_usuario,
@@ -108,7 +97,7 @@ INSERT INTO usuario (
 )
 VALUES (
   1, -- id_rol
-  'juanperez', -- nombre_usuario
+  'Juan', -- nombre_usuario
   'Pérez', -- apellido1
   'González', -- apellido2
   'juan.perez@example.com', -- correo_electronico
