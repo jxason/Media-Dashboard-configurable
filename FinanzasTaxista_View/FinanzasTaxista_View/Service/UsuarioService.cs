@@ -8,7 +8,7 @@ namespace FinanzasTaxista_View.Service
     public class UsuarioService
     {
         // Declaración de las variables que se van a utilizar para conseguir la data.
-        
+
         private readonly HttpClient _httpClient;
         private readonly string _apiUrl;
 
@@ -17,7 +17,7 @@ namespace FinanzasTaxista_View.Service
             _httpClient = httpClient;
             _apiUrl = configuration["ApiUrl"] + "Usuario/";
         }
-        
+
         // Método para obtener todos los usuarios.
 
         public async Task<List<UsuarioModel>> GetUsuariosAsync()
@@ -33,15 +33,26 @@ namespace FinanzasTaxista_View.Service
 
         public async Task<bool> AddUsuarioAsync(UsuarioModel usuario)
         {
-            
-            var jsonUser = JsonSerializer.Serialize(usuario);
-            var content = new StringContent(jsonUser, Encoding.UTF8, "application/json");
-            var response = await _httpClient.PostAsync(_apiUrl, content);
 
-            return response.IsSuccessStatusCode;
+            if (usuario.id_rol <= 0)
+            {
+                return false;
+            }
 
+            try
+            {
+                var jsonUser = JsonSerializer.Serialize(usuario);
+                var content = new StringContent(jsonUser, Encoding.UTF8, "application/json");
+                var response = await _httpClient.PostAsync(_apiUrl, content);
+
+                return response.IsSuccessStatusCode;
+            }
+            catch
+            {
+                // Puedes agregar logging aquí si usas ILogger
+                return false;
+            }
         }
-        
         public async Task<bool> UpdateUsuarioAsync(UsuarioModel usuario)
         {
             var jsonUser = JsonSerializer.Serialize(usuario);
@@ -50,6 +61,12 @@ namespace FinanzasTaxista_View.Service
 
             return response.IsSuccessStatusCode;
 
+        }
+
+        public async Task<bool> DeleteUsuarioAsync(int id)
+        {
+            var response = await _httpClient.DeleteAsync($"{_apiUrl}{id}");
+            return response.IsSuccessStatusCode;
         }
 
 

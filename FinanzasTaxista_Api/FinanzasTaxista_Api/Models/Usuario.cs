@@ -7,6 +7,7 @@ namespace FinanzasTaxista_Api.Models
 
         [Key]
         public int id { get; set; }
+        
         public int id_rol { get; set; }
         
         public string nombre_usuario { get; set; } = string.Empty;

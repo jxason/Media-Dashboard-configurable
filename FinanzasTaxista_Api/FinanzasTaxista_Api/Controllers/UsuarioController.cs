@@ -30,15 +30,35 @@ namespace FinanzasTaxista_Api.Controllers
             return await _context.usuario.ToListAsync();
 
         }
+        
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Usuario>> GetUsuarioById(int id)
+        {
+            var usuario = await _context.usuario.FindAsync(id);
+
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+
+            return usuario;
+        }
 
         [HttpPost]
-        public async Task<IActionResult> AddUsuario(Usuario usuario)
+        public async Task<ActionResult<Usuario>> AddUsuario([FromBody] Usuario usuario)
         {
+            if (!ModelState.IsValid)
+            {
+                var mensajeError = new { msg = "El modelo no se carga correctamente." };
+                return BadRequest(mensajeError);
+            }
 
+            var mensajeCorrecto = new { msg = "Usuario añadido correctamente." };
             _context.usuario.Add(usuario);
             await _context.SaveChangesAsync();
+            
+            return CreatedAtAction(nameof(GetUsuarioById), new { id = usuario.id }, new { user = usuario, mensajeCorrecto });
 
-            return Ok(usuario);
         }
 
         [HttpPut("{id}")]

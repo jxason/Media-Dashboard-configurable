@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using FinanzasTaxista_Api.DBContext;
+﻿using FinanzasTaxista_Api.DBContext;
 using FinanzasTaxista_Api.Models;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace FinanzasTaxista_Api.Controllers
 {
@@ -28,61 +29,53 @@ namespace FinanzasTaxista_Api.Controllers
 
         }
 
-        [HttpPost]
-        public async Task<IActionResult> AddRol(Rol rol)
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Rol>> GetRolById(int id)
         {
+            var rol = await _context.rol.FindAsync(id);
 
+            if (rol == null)
+            {
+                return NotFound();
+            }
+
+            return rol;
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<Rol>> AddRol([FromBody] Rol rol)
+        {
+            if (!ModelState.IsValid)
+            {
+                var mensajeError = new { msg = "El modelo no se carga correctamente." };
+                return BadRequest(mensajeError);
+            }
+
+            var mensajeCorrecto = new { msg = "Rol añadido correctamente." };
             _context.rol.Add(rol);
             await _context.SaveChangesAsync();
 
-            return Ok(rol);
+            return CreatedAtAction(nameof(GetRolById), new { id = rol.id }, new { rol = rol, mensajeCorrecto });
+
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateRol(int id, [FromBody] Rol rol)
+        public async Task<ActionResult<Rol>> UpdateRol(int id, [FromBody] Rol rol)
         {
-            // Validar que el id en la ruta coincida con el ID en el cuerpo de la solicitud.
             if (id != rol.id)
             {
-                return BadRequest("El ID en la ruta no coincide con el ID en el cuerpo de la solicitud.");
+                return BadRequest(new { msg = "El id proporcionado no coincide con el rol." });
             }
-
-            // Validar el modelo.
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            // Verificar si el producto existe en la base de datos.
-            var rolExistente = await _context.rol.FindAsync(id);
-            
-            if (rolExistente == null)
-            {
-                return NotFound("El rol no existe.");
-            }
+            _context.rol.Update(rol);
+            await _context.SaveChangesAsync();
+            return Ok();
 
-            // Actualizar las propiedades del producto existente.
-            _context.Entry(rolExistente).CurrentValues.SetValues(rol);
-
-            try
-            {
-                // Guardar los cambios en la base de datos.
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!_context.rol.Any(p => p.id == id))
-                {
-                    return NotFound("El rol no existe.");
-                }
-                else
-                {
-                    throw; // Lanzar la excepción si no se puede manejar.
-                }
-            }
-            
-            // Devolver una respuesta 204 (No Content).
-            return NoContent();
         }
+    
     }
 }
