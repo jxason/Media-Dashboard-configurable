@@ -1,0 +1,18 @@
+﻿@page
+@model FinanzasTaxista_View.Pages.Views.Categoria.CrearModel
+
+<div class="container mt-4">
+    <h2 class="mb-3">Agregar nueva categoría</h2>
+
+    <form method="post">
+
+        <div class="mb-3">
+            <label class="form-label">Nombre de la categoría</label>
+            <input asp-for="_categoriaModel.nombre_categoria" class="form-control" />
+            <span asp-validation-for="_categoriaModel.nombre_categoria" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <a asp-page="/Views/CategoriasView" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
