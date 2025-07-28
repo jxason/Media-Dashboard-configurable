@@ -1,0 +1,38 @@
+﻿@page
+@model FinanzasTaxista_View.Pages.Views.CategoriasViewModel
+@{
+    ViewData["Title"] = "Lista de categorias";
+}
+
+<div class="d-flex justify-content-end mb-3">
+    <a class="btn btn-primary" asp-page="/Views/Categoria/Crear">
+        <i class="fas fa-plus"></i> Agregar categoría
+    </a>
+</div>
+
+<table class="table">  
+  <thead>  
+      <tr>  
+          <th>Id</th>  
+          <th>Nombre Categoria</th> 
+          <th>Actions</th>  
+      </tr>  
+  </thead>  
+  <tbody>
+        @foreach (var catg in Model._Categorias)
+        {  
+          <tr>
+                <td>@catg.id</td>
+                <td>@catg.nombre_categoria</td>
+              <td>
+                    <form method="post" asp-page-handler="Eliminar" asp-route-id="@catg.id"
+                          onsubmit="return confirm('¿Estás segura de eliminar este elemento?');"
+                          style="display:inline;">
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </form>
+                    <a class="btn btn-success" asp-page="/Views/Categoria/Editar" asp-route-id="@catg.id" role="button">Editar</a>
+                </td>  
+          </tr>  
+      }  
+  </tbody>  
+</table>
