@@ -25,34 +25,12 @@ CREATE TABLE usuario (
 );
 GO
 
-
--- Tabla de días de trabajooooo
+-- Tabla de días de trabajo
 CREATE TABLE dia_trabajo (
   id INT IDENTITY(1,1) PRIMARY KEY,
   fecha DATE NOT NULL UNIQUE
 );
 GO
-
--- Actualizacion de la tabla /Jason Zuñiga/27/07/2025
-
--- 1.Se agrega la columna id_usuario para relacionar los días de trabajo con los usuarios.
-ALTER TABLE dia_trabajo ADD id_usuario INT;
-
---	2.Luego se agrega la restricción de clave foránea para relacionar la columna id_usuario con la tabla usuario.
-UPDATE dia_trabajo SET id_usuario = 1;
-
--- 2.Aqui vamos a revisar si la tabla dia de trabajo ya tiene datos, si no tiene datos(ejemplo que me salio a mi: UQ__dia_trab__E1141322ACDB3B44), se puede agregar la restricción 
--- de clave foránea(en caso que no les salga nada saltar al paso 6).
-SELECT name FROM sys.indexes WHERE object_id = OBJECT_ID('dia_trabajo') AND is_unique = 1;
-
--- 3.Probablemente les saldra la restriccion que ya el sql crea el por si solo asi que aqui simplemente la quitamos
-ALTER TABLE dia_trabajo
-DROP CONSTRAINT UQ__dia_trab__E1141322ACDB3B44;
-
--- 4.Ahora si agregamos la restricción de clave foránea para relacionar la columna id_usuario con la tabla usuario.
-CREATE UNIQUE INDEX UX_dia_trabajo_usuario_fecha
-ON dia_trabajo (id_usuario, fecha);
-
 
 -- Tabla de categorías
 CREATE TABLE categoria (

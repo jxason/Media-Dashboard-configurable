@@ -4,33 +4,38 @@
     ViewData["Title"] = "Lista de usuarios";
 }
 
-<table class="table">  
-  <thead>  
-      <tr>  
-          <th>Id</th>  
-          <th>Nombre Usuario</th>  
-          <th>Apellido 1</th>  
-          <th>Apellido 2</th>  
-          <th>Correo Electrónico</th>  
-          <th>Id Rol</th>  
-          <th>Actions</th>  
-      </tr>  
-  </thead>  
-  <tbody>
+<!-- Enlace al archivo CSS personalizado -->
+<link rel="stylesheet" href="~/css/usuarios-vista.css" />
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre Usuario</th>
+            <th>Apellido 1</th>
+            <th>Apellido 2</th>
+            <th>Correo Electrónico</th>
+            <th>Id Rol</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
         @foreach (var user in Model._Usuarios)
-        {  
-          <tr>  
-              <td>@user.id</td>  
-              <td>@user.nombre_usuario</td>  
-              <td>@user.apellido1</td>  
-              <td>@user.apellido2</td>  
-              <td>@user.correo_electronico</td>  
-              <td>@user.id_rol</td>  
-              <td>  
-                  <a class="btn btn-danger" asp-page="CRUD/UsersCRUD/Delete" asp-route-id="@user.id" role="button">Eliminar</a>
-                  <a class="btn btn-success" asp-page="/Views/UsuarioCRUD/Editar" asp-route-id="@user.id" role="button">Editar</a>
-                </td>  
-          </tr>  
-      }  
-  </tbody>  
+        {
+            <tr>
+                <td>@user.id</td>
+                <td>@user.nombre_usuario</td>
+                <td>@user.apellido1</td>
+                <td>@user.apellido2</td>
+                <td>@user.correo_electronico</td>
+                <td>@user.id_rol</td>
+                <td>
+                    <a class="btn btn-danger" asp-page="/Views/UsuarioCRUD/Eliminar" asp-route-id="@user.id" role="button">Eliminar</a>
+                    <a class="btn btn-success" asp-page="/Views/UsuarioCRUD/Editar" asp-route-id="@user.id" role="button">Editar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>

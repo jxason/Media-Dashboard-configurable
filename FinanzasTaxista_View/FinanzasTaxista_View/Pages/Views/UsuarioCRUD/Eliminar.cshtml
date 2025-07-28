@@ -1,0 +1,45 @@
+﻿@page
+@model FinanzasTaxista_View.Pages.Views.UsuarioCRUD.EliminarModel
+@{
+    ViewData["Title"] = "Eliminar usuario";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/formulario-vista.css" />
+</head>
+<body>
+    <div class="page-container">
+        <div class="form-container">
+            <h2>Eliminar usuario</h2>
+
+            <form method="post">
+                <input asp-for="_usuarioModel.id" type="hidden" />
+
+                <!-- Campo visible pero no editable -->
+                <div class="form-group">
+                    <label>ID de usuario</label>
+                    <input type="text" class="form-control" value="@Model._usuarioModel.id" readonly />
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">Eliminar</button>
+                    <a asp-page="/Views/UsuariosView" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </form>
+
+            @if (!string.IsNullOrEmpty(Model.message))
+            {
+                <div class="message">
+                    <strong>@Model.message</strong>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+</html>
+
+

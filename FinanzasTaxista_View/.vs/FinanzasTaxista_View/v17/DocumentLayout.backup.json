@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Daniel\\Documents\\GitHub\\Media-Dashboard-configurable\\FinanzasTaxista_View\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AD8C961A-AF67-4E94-AAA1-211A78A73C97}|FinanzasTaxista_View\\FinanzasTaxista_View.csproj|c:\\users\\daniel\\documents\\github\\media-dashboard-configurable\\finanzastaxista_view\\finanzastaxista_view\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD8C961A-AF67-4E94-AAA1-211A78A73C97}|FinanzasTaxista_View\\FinanzasTaxista_View.csproj|solutionrelative:finanzastaxista_view\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel\\Documents\\GitHub\\Media-Dashboard-configurable\\FinanzasTaxista_View\\FinanzasTaxista_View\\Program.cs",
+              "RelativeDocumentMoniker": "FinanzasTaxista_View\\Program.cs",
+              "ToolTip": "C:\\Users\\Daniel\\Documents\\GitHub\\Media-Dashboard-configurable\\FinanzasTaxista_View\\FinanzasTaxista_View\\Program.cs",
+              "RelativeToolTip": "FinanzasTaxista_View\\Program.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T20:18:22.7Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

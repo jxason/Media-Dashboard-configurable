@@ -46,7 +46,7 @@ namespace FinanzasTaxista_View.Pages.Views.UsuarioCRUD
                 // Verificar que el ID esté presente
                 if (_usuarioModel.id <= 0)
                 {
-                    message = "ID de usuario inválido.";
+                    message = "id de usuario inválido.";
                     return Page();
                 }
 
@@ -58,7 +58,7 @@ namespace FinanzasTaxista_View.Pages.Views.UsuarioCRUD
                 }
                 else
                 {
-                    message = "Error al actualizar el usuario";
+                    message = "Error al actualizar el usuario.";
                     return Page();
                 }
             }

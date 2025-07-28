@@ -31,6 +31,23 @@ namespace FinanzasTaxista_View.Service
             return new List<RolModel>();
         }
 
+        public async Task<RolModel?> GetRolByIdAsync(int id)
+        {
+            var response = await _httpClient.GetAsync($"{_apiUrl}{id}");
+
+            if (!response.IsSuccessStatusCode)
+            {
+                return null;
+            }
+
+            var json = await response.Content.ReadAsStringAsync();
+
+            return JsonSerializer.Deserialize<RolModel>(json,
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true }
+            );
+        }
+
+
         public async Task<bool> AddRolAsync(RolModel rol)
         {
 

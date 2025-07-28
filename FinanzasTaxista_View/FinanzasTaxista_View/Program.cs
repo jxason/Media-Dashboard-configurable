@@ -1,27 +1,56 @@
-
-
 using FinanzasTaxista_View.Service;
+using Microsoft.AspNetCore.Authentication.Cookies;
+
 var builder = WebApplication.CreateBuilder(args);
 
-
-//debuggin config
+// -------------------------------------------
+// Configuración del registro (depuración)
+// -------------------------------------------
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
-// Add services to the container.
+
+// -------------------------------------------
+// Registro de servicios
+// -------------------------------------------
 builder.Services.AddRazorPages();
+
+// HttpClient servicios
 builder.Services.AddHttpClient<UsuarioService>();
 builder.Services.AddHttpClient<RolService>();
 builder.Services.AddHttpClient<DiaTrabajoService>();
 builder.Services.AddHttpClient<CategoriaService>();
 
+// -------------------------------------------
+// Autenticación y autorización
+// -------------------------------------------
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
+    {
+        options.LoginPath = "/Views/Account/Login"; // Ruta para inicio de sesión.
+        options.AccessDeniedPath = "/Views/Account/Login";  // Ruta para acceso denegado.
+    });
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminPolicy", policy =>
+        policy.RequireRole("Administrador"));
+
+    options.AddPolicy("UserPolicy", policy =>
+        policy.RequireRole("Taxista"));
+});
+
+// -------------------------------------------
+//  Construir aplicación
+// -------------------------------------------
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// -------------------------------------------
+// Configuración del canal de peticiones HTTP
+// -------------------------------------------
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+    app.UseHsts(); // Strict Transport Security
 }
 
 app.UseHttpsRedirection();
@@ -29,8 +58,16 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapRazorPages();
+
+app.MapGet("/", context =>
+{
+    context.Response.Redirect("/Views/Account/Login");
+    return Task.CompletedTask;
+});
+
 
 app.Run();

@@ -23,41 +23,80 @@ namespace FinanzasTaxista_Api.Controllers
         // GET: api/DiaTrabajo
 
         [HttpGet]
-        public async Task<ActionResult<List<DiaTrabajo>>> GetDias()
+        public async Task<ActionResult<List<DiaTrabajo>>> GetDiasTrabajo()
         {
 
             return await _context.dia_trabajo.ToListAsync();
 
         }
 
-        // POST: api/DiaTrabajo/registrar
-
-        [HttpPost("registrar")]
-            public async Task<IActionResult> RegistrarDiaTrabajo([FromQuery] int idUsuario)
+        [HttpGet("{id}")]
+        public async Task<ActionResult<DiaTrabajo>> GetDiaTrabajoById(int id)
         {
-                /*/ Verificamos que el usuario esté "logueado" (simulado en sesión ya que aun no tenemos login)
-                int? idUsuario = HttpContext.Session.GetInt32("IdUsuario");*/ //queda en el aire por que no tenemos usuarios que identificar
-                if (idUsuario == null)
-                {
-                    return Unauthorized(new { mensaje = "Usuario no autenticado." });
-                }
+            var diaTrabajo = await _context.dia_trabajo.FindAsync(id);
 
-                try
-                {
-                    // Ejecutamos el stored procedure con el idUsuario
-                    await _context.Database.ExecuteSqlRawAsync("EXEC sp_RegistrarDiaTrabajo @p0", idUsuario);
-
-                    return Ok(new { mensaje = "Día de trabajo registrado o ya existente." });
-                }
-                catch (DbUpdateException dbEx)
-                {
-                    return StatusCode(500, new { error = "Error en base de datos", detalle = dbEx.InnerException?.Message ?? dbEx.Message });
-                }
-                catch (System.Exception ex)
-                {
-                    return StatusCode(500, new { error = "Error interno del servidor", detalle = ex.Message });
-                }
+            if (diaTrabajo == null)
+            {
+                return NotFound();
             }
+
+            return diaTrabajo;
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<Rol>> AddDiaTrabajo([FromBody] DiaTrabajo diaTrabajo)
+        {
+            if (!ModelState.IsValid)
+            {
+                var mensajeError = new { msg = "El modelo no se carga correctamente." };
+                return BadRequest(mensajeError);
+            }
+
+            var mensajeCorrecto = new { msg = "Día de trabajo añadido correctamente." };
+            _context.dia_trabajo.Add(diaTrabajo);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetDiaTrabajoById), new { id = diaTrabajo.id }, new { workDay = diaTrabajo, mensajeCorrecto });
+
+        }
+
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<DiaTrabajo>> UpdateDiaTrabajo(int id, [FromBody] DiaTrabajo dia)
+        {
+            if (id != dia.id)
+            {
+                return BadRequest(new { msg = "El id proporcionado no coincide con el dia de trabajo." });
+            }
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            _context.dia_trabajo.Update(dia);
+            await _context.SaveChangesAsync();
+            return Ok();
+
+        }
+
+
+        // Eliminar dia de trabajo.
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteDiaTrabajo(int id)
+        {
+            var dia = await _context.dia_trabajo.FindAsync(id);
+            if (dia == null)
+            {
+                return NotFound();
+            }
+
+            _context.dia_trabajo.Remove(dia);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+
+        }
     }
 
 }
+

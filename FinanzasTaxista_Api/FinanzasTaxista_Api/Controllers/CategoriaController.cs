@@ -40,6 +40,20 @@ namespace FinanzasTaxista_Api.Controllers
             return Ok(categoria);
         }
 
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Categoria>> GetCategoriaById(int id)
+        {
+            var categoria = await _context.categoria.FindAsync(id);
+
+            if (categoria == null)
+            {
+                return NotFound();
+            }
+
+            return categoria;
+        }
+
+
         [HttpPut("{id}")]
         public async Task<ActionResult<Categoria>> UpdateCategoria(int id, [FromBody] Categoria categoria)
         {

@@ -1,5 +1,5 @@
 ﻿@page
-@model FinanzasTaxista_View.Models.UsuarioModel
+@model FinanzasTaxista_View.Pages.Views.Account.LoginModel
 
 @{
     ViewData["Title"] = "Login";
@@ -9,51 +9,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="~/css/login-view.css">
+    <link rel="stylesheet" href="~/css/cuenta-vista.css" />
 </head>
 <body>
     <div class="login-container">
         <div class="login-header">
             <h2>
-                <span class="login-icon">🔑</span>
                 Iniciar Sesión
             </h2>
             <p class="login-subtitle">Accede a tu cuenta</p>
         </div>
 
-        <form asp-controller="Login" asp-action="SigIn" method="post">
-
+        <form method="post">
             <div class="form-group">
-                <label asp-for="nombre_usuario" class="form-label">Usuario</label>
-                <input asp-for="nombre_usuario"
+                <label asp-for="usuarioModel.correo_electronico" class="form-label">Correo Electrónico</label>
+                <input asp-for="usuarioModel.correo_electronico"
+                       type="email"
                        class="form-input"
-                       placeholder="Ingrese su nombre de usuario"
+                       placeholder="Ingrese su correo"
                        required />
-                <span asp-validation-for="nombre_usuario" class="text-danger"></span>
+                <span asp-validation-for="usuarioModel.correo_electronico" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="contrasena" class="form-label">Contraseña</label>
-                <input asp-for="contrasena"
+                <label asp-for="usuarioModel.contrasena" class="form-label">Contraseña</label>
+                <input asp-for="usuarioModel.contrasena"
                        type="password"
                        class="form-input"
                        placeholder="Ingrese su contraseña"
                        required />
-                <span asp-validation-for="contrasena" class="text-danger"></span>
+                <span asp-validation-for="usuarioModel.contrasena" class="text-danger"></span>
             </div>
 
-            <div class="form-group">
-                <button type="submit" class="btn-login">Iniciar Sesión</button>
-            </div>
+            @if (!string.IsNullOrEmpty(Model.Mensaje))
+            {
+                <div class="form-error">
+                    <span class="text-danger">@Model.Mensaje</span>
+                </div>
+            }
 
+            <button type="submit" class="btn-login">Iniciar Sesión</button>
         </form>
 
-
         <div class="forgot-password">
-            <a href="#">¿Olvidaste tu contraseña?</a>
+            <a asp-page="/Views/Account/Registro">¿No tienes cuenta? Regístrate aquí</a>
         </div>
     </div>
 </body>
