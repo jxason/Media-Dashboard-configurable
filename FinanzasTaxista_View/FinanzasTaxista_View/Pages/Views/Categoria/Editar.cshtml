@@ -1,0 +1,27 @@
+﻿@page "{id:int}"
+@model FinanzasTaxista_View.Pages.Views.Categoria.EditarModel
+@{
+    ViewData["Title"] = "Editar categoria";
+}
+
+<h2>Editar usuario</h2>
+
+<form method="post">
+
+    <input asp-for="_categoriaModel.id" type="hidden" />
+    
+    <div class="form-group">
+        <label asp-for="_categoriaModel.nombre_categoria"></label>
+        <input asp-for="_categoriaModel.nombre_categoria" class="form-control" />
+        <span asp-validation-for="_categoriaModel.nombre_categoria" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+    <a asp-page="/Views/UsuariosView" class="btn btn-secondary">Cancelar</a>
+</form>
+
+
+
+
+
+
+

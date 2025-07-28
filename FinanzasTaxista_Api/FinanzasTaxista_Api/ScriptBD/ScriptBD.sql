@@ -25,7 +25,7 @@ CREATE TABLE usuario (
 );
 GO
 
--- Tabla de días de trabajooooo
+-- Tabla de días de trabajo
 CREATE TABLE dia_trabajo (
   id INT IDENTITY(1,1) PRIMARY KEY,
   fecha DATE NOT NULL UNIQUE

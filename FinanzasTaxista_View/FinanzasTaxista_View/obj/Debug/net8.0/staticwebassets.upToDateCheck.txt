@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 wwwroot\css\login-view.css
+=======
+wwwroot\css\cuenta-vista.css
+wwwroot\css\formulario-vista.css
+>>>>>>> 1bea1ac6ab44e1e58a23c50968a4154cc68b760f
 wwwroot\css\site.css
+wwwroot\css\usuarios-vista.css
 wwwroot\favicon.ico
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
@@ -56,6 +62,13 @@ wwwroot\lib\jquery-validation\dist\additional-methods.min.js
 wwwroot\lib\jquery-validation\dist\jquery.validate.js
 wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
 wwwroot\lib\jquery-validation\LICENSE.md
+<<<<<<< HEAD
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+=======
+wwwroot\lib\jquery\dist\jquery.js
+wwwroot\lib\jquery\dist\jquery.min.js
+wwwroot\lib\jquery\dist\jquery.min.map
+wwwroot\lib\jquery\LICENSE.txt
+>>>>>>> 1bea1ac6ab44e1e58a23c50968a4154cc68b760f

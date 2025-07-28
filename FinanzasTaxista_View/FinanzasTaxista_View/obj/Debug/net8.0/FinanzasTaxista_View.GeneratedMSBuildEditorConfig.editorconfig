@@ -40,11 +40,39 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+<<<<<<< HEAD
 [C:/CUATRI - 8 PROYECTOFINAL/Media-Dashboard-configurable/FinanzasTaxista_View/FinanzasTaxista_View/Pages/Views/UsuarioCRUD/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcVXN1YXJpb0NSVURcRWRpdGFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/CUATRI - 8 PROYECTOFINAL/Media-Dashboard-configurable/FinanzasTaxista_View/FinanzasTaxista_View/Pages/Views/UsuariosView.cshtml]
+=======
+[C:/Users/Daniel/Documents/GitHub/Media-Dashboard-configurable/FinanzasTaxista_View/FinanzasTaxista_View/Pages/Views/Account/Registro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcQWNjb3VudFxSZWdpc3Ryby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Daniel/Documents/GitHub/Media-Dashboard-configurable/FinanzasTaxista_View/FinanzasTaxista_View/Pages/Views/CategoriasView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcQ2F0ZWdvcmlhc1ZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Daniel/Documents/GitHub/Media-Dashboard-configurable/FinanzasTaxista_View/FinanzasTaxista_View/Pages/Views/Categoria/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcQ2F0ZWdvcmlhXENyZWFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Daniel/Documents/GitHub/Media-Dashboard-configurable/FinanzasTaxista_View/FinanzasTaxista_View/Pages/Views/Categoria/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcQ2F0ZWdvcmlhXEVkaXRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Daniel/Documents/GitHub/Media-Dashboard-configurable/FinanzasTaxista_View/FinanzasTaxista_View/Pages/Views/UsuarioCRUD/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcVXN1YXJpb0NSVURcRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Daniel/Documents/GitHub/Media-Dashboard-configurable/FinanzasTaxista_View/FinanzasTaxista_View/Pages/Views/UsuarioCRUD/Eliminar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcVXN1YXJpb0NSVURcRWxpbWluYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Daniel/Documents/GitHub/Media-Dashboard-configurable/FinanzasTaxista_View/FinanzasTaxista_View/Pages/Views/UsuariosView.cshtml]
+>>>>>>> 1bea1ac6ab44e1e58a23c50968a4154cc68b760f
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcVXN1YXJpb3NWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
