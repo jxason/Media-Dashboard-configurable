@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FinanzasTaxista_Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+855ca96df48c3874a4a75db6f6703524224c3aea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8eca4e26db7b9bc08aeb901dacfd209cc2506c1c")]
 [assembly: System.Reflection.AssemblyProductAttribute("FinanzasTaxista_Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FinanzasTaxista_Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

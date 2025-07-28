@@ -4296,23 +4296,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Daniel\\.nuget\\packages\\": {},
+    "C:\\Users\\sebaw\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Daniel\\Documents\\GitHub\\Media-Dashboard-configurable\\FinanzasTaxista_View\\FinanzasTaxista_View\\FinanzasTaxista_View.csproj",
+      "projectUniqueName": "C:\\CUATRI - 8 PROYECTOFINAL\\Media-Dashboard-configurable\\FinanzasTaxista_View\\FinanzasTaxista_View\\FinanzasTaxista_View.csproj",
       "projectName": "FinanzasTaxista_View",
-      "projectPath": "C:\\Users\\Daniel\\Documents\\GitHub\\Media-Dashboard-configurable\\FinanzasTaxista_View\\FinanzasTaxista_View\\FinanzasTaxista_View.csproj",
-      "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Daniel\\Documents\\GitHub\\Media-Dashboard-configurable\\FinanzasTaxista_View\\FinanzasTaxista_View\\obj\\",
+      "projectPath": "C:\\CUATRI - 8 PROYECTOFINAL\\Media-Dashboard-configurable\\FinanzasTaxista_View\\FinanzasTaxista_View\\FinanzasTaxista_View.csproj",
+      "packagesPath": "C:\\Users\\sebaw\\.nuget\\packages\\",
+      "outputPath": "C:\\CUATRI - 8 PROYECTOFINAL\\Media-Dashboard-configurable\\FinanzasTaxista_View\\FinanzasTaxista_View\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sebaw\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4339,7 +4339,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -4373,7 +4373,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
