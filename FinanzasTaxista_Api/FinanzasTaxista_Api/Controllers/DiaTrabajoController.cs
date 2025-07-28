@@ -30,6 +30,34 @@ namespace FinanzasTaxista_Api.Controllers
 
         }
 
+        // POST: api/DiaTrabajo/registrar
+
+        [HttpPost("registrar")]
+            public async Task<IActionResult> RegistrarDiaTrabajo([FromQuery] int idUsuario)
+        {
+                /*/ Verificamos que el usuario esté "logueado" (simulado en sesión ya que aun no tenemos login)
+                int? idUsuario = HttpContext.Session.GetInt32("IdUsuario");*/ //queda en el aire por que no tenemos usuarios que identificar
+                if (idUsuario == null)
+                {
+                    return Unauthorized(new { mensaje = "Usuario no autenticado." });
+                }
+
+                try
+                {
+                    // Ejecutamos el stored procedure con el idUsuario
+                    await _context.Database.ExecuteSqlRawAsync("EXEC sp_RegistrarDiaTrabajo @p0", idUsuario);
+
+                    return Ok(new { mensaje = "Día de trabajo registrado o ya existente." });
+                }
+                catch (DbUpdateException dbEx)
+                {
+                    return StatusCode(500, new { error = "Error en base de datos", detalle = dbEx.InnerException?.Message ?? dbEx.Message });
+                }
+                catch (System.Exception ex)
+                {
+                    return StatusCode(500, new { error = "Error interno del servidor", detalle = ex.Message });
+                }
+            }
     }
 
 }
