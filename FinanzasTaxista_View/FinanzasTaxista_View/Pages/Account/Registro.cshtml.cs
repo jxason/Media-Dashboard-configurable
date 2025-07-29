@@ -33,7 +33,7 @@ namespace FinanzasTaxista_View.Pages.Views.Account
                 if (response)
                 {
                     message = "Usuario registrado correctamente.";
-                    return RedirectToPage("/Views/Account/Login");
+                    return RedirectToPage("/Account/Login");
                 }
                 else
                 {
