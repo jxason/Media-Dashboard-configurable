@@ -1,5 +1,5 @@
 ﻿@page
-@model FinanzasTaxista_View.Pages.Views.Account.LoginModel
+@model FinanzasTaxista_View.Pages.Account.LoginModel
 
 @{
     ViewData["Title"] = "Login";
@@ -24,34 +24,19 @@
         </div>
 
         <form method="post">
-            <div class="form-group">
-                <label asp-for="usuarioModel.correo_electronico" class="form-label">Correo Electrónico</label>
-                <input asp-for="usuarioModel.correo_electronico"
-                       type="email"
-                       class="form-input"
-                       placeholder="Ingrese su correo"
-                       required />
-                <span asp-validation-for="usuarioModel.correo_electronico" class="text-danger"></span>
+            <div>
+                <label asp-for="usuarioLogin.identificador"></label>
+                <input asp-for="usuarioLogin.identificador" />
+                <span asp-validation-for="usuarioLogin.identificador"></span>
             </div>
 
-            <div class="form-group">
-                <label asp-for="usuarioModel.contrasena" class="form-label">Contraseña</label>
-                <input asp-for="usuarioModel.contrasena"
-                       type="password"
-                       class="form-input"
-                       placeholder="Ingrese su contraseña"
-                       required />
-                <span asp-validation-for="usuarioModel.contrasena" class="text-danger"></span>
+            <div>
+                <label asp-for="usuarioLogin.contrasena"></label>
+                <input asp-for="usuarioLogin.contrasena" type="password" />
+                <span asp-validation-for="usuarioLogin.contrasena"></span>
             </div>
 
-            @if (!string.IsNullOrEmpty(Model.Mensaje))
-            {
-                <div class="form-error">
-                    <span class="text-danger">@Model.Mensaje</span>
-                </div>
-            }
-
-            <button type="submit" class="btn-login">Iniciar Sesión</button>
+            <button type="submit">Ingresar</button>
         </form>
 
         <div class="forgot-password">

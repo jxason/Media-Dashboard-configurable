@@ -1,5 +1,5 @@
 ﻿@page
-@model FinanzasTaxista_View.Pages.Views.Account.RegistroModel
+@model FinanzasTaxista_View.Pages.Account.RegisterModel
 @{
     ViewData["Title"] = "Registrar usuario";
     Layout = null;
@@ -20,58 +20,47 @@
         </div>
 
         <form method="post">
-            <div class="form-group">
-                <label asp-for="_usuarioModel.id_rol" class="form-label">ID de rol</label>
-                <input asp-for="_usuarioModel.id_rol" type="number" class="form-input" />
-                <span asp-validation-for="_usuarioModel.id_rol" class="text-danger"></span>
-            </div>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
             <div class="form-group">
-                <label asp-for="_usuarioModel.nombre_usuario" class="form-label">Nombre de usuario</label>
-                <input asp-for="_usuarioModel.nombre_usuario" class="form-input" />
-                <span asp-validation-for="_usuarioModel.nombre_usuario" class="text-danger"></span>
+                <label asp-for="Input.nombre_usuario"></label>
+                <input asp-for="Input.nombre_usuario" class="form-control" />
+                <span asp-validation-for="Input.nombre_usuario" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="_usuarioModel.apellido1" class="form-label">Primer apellido</label>
-                <input asp-for="_usuarioModel.apellido1" class="form-input" />
-                <span asp-validation-for="_usuarioModel.apellido1" class="text-danger"></span>
+                <label asp-for="Input.apellido1"></label>
+                <input asp-for="Input.apellido1" class="form-control" />
+                <span asp-validation-for="Input.apellido1" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="_usuarioModel.apellido2" class="form-label">Segundo apellido</label>
-                <input asp-for="_usuarioModel.apellido2" class="form-input" />
-                <span asp-validation-for="_usuarioModel.apellido2" class="text-danger"></span>
+                <label asp-for="Input.apellido2"></label>
+                <input asp-for="Input.apellido2" class="form-control" />
+                <span asp-validation-for="Input.apellido2" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="_usuarioModel.correo_electronico" class="form-label">Correo electrónico</label>
-                <input asp-for="_usuarioModel.correo_electronico" type="email" class="form-input" />
-                <span asp-validation-for="_usuarioModel.correo_electronico" class="text-danger"></span>
+                <label asp-for="Input.correo_electronico"></label>
+                <input asp-for="Input.correo_electronico" class="form-control" />
+                <span asp-validation-for="Input.correo_electronico" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="_usuarioModel.contrasena" class="form-label">Contraseña</label>
-                <input asp-for="_usuarioModel.contrasena" type="password" class="form-input" />
-                <span asp-validation-for="_usuarioModel.contrasena" class="text-danger"></span>
+                <label asp-for="Input.contrasena"></label>
+                <input asp-for="Input.contrasena" type="password" class="form-control" />
+                <span asp-validation-for="Input.contrasena" class="text-danger"></span>
             </div>
 
-            <button type="submit" class="btn-login">Registrar</button>
-
-            <div class="forgot-password">
-                <a asp-page="/Account/Login">Cancelar</a>
-            </div>
+            <button type="submit" class="btn btn-primary">Registrarse</button>
         </form>
 
         @if (!string.IsNullOrEmpty(Model.message))
         {
-            <div class="message">
+            <div class="alert alert-info mt-3">
                 <strong>@Model.message</strong>
             </div>
         }
     </div>
 </body>
 </html>
-
-
-
