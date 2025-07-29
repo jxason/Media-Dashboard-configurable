@@ -1,6 +1,8 @@
 ﻿using System.Text.Json;
-using FinanzasTaxista_View.Models;
+using FinanzasTaxista_View.Models; 
 using System.Text;
+using FinanzasTaxista_View.DTO_s;
+using FinanzasTaxista_View.Models.DTO_s;
 
 
 namespace FinanzasTaxista_View.Service
@@ -31,6 +33,7 @@ namespace FinanzasTaxista_View.Service
             return new List<UsuarioModel>();
         }
 
+        // Método para obtener un usuario por ID.
         public async Task<bool> AddUsuarioAsync(UsuarioModel usuario)
         {
 
@@ -38,7 +41,7 @@ namespace FinanzasTaxista_View.Service
             {
                 return false;
             }
-
+            // Validación de datos del usuario antes de enviar la solicitud.
             try
             {
                 var jsonUser = JsonSerializer.Serialize(usuario);
@@ -53,6 +56,7 @@ namespace FinanzasTaxista_View.Service
                 return false;
             }
         }
+        // Método para obtener un usuario por ID.
         public async Task<bool> UpdateUsuarioAsync(UsuarioModel usuario)
         {
             var jsonUser = JsonSerializer.Serialize(usuario);
@@ -63,6 +67,7 @@ namespace FinanzasTaxista_View.Service
 
         }
 
+        // Método para eliminar un usuario por ID.
         public async Task<bool> DeleteUsuarioAsync(int id)
         {
             var response = await _httpClient.DeleteAsync($"{_apiUrl}{id}");
@@ -70,5 +75,21 @@ namespace FinanzasTaxista_View.Service
         }
 
 
+        // Método para iniciar sesión de un usuario.
+        public async Task<HttpResponseMessage> LoginAsync(UsuarioLoginDTO dto)
+        {
+            var response = await _httpClient.PostAsJsonAsync($"{_apiUrl}login", dto);
+            return response;
+        }
+
+        // Método para registrar un nuevo usuario.
+        public async Task<bool> RegisterAsync(UsuarioRegisterDTO dto)
+        {
+            var response = await _httpClient.PostAsJsonAsync(_apiUrl + "register", dto);
+            return response.IsSuccessStatusCode;
+        }
+
+
     }
+
 }

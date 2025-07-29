@@ -1,0 +1,48 @@
+﻿@page
+@model FinanzasTaxista_View.Pages.Account.LoginModel
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="~/css/cuenta-vista.css" />
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <h2>
+                Iniciar Sesión
+            </h2>
+            <p class="login-subtitle">Accede a tu cuenta</p>
+        </div>
+
+        <form method="post">
+            <div>
+                <label asp-for="usuarioLogin.identificador"></label>
+                <input asp-for="usuarioLogin.identificador" />
+                <span asp-validation-for="usuarioLogin.identificador"></span>
+            </div>
+
+            <div>
+                <label asp-for="usuarioLogin.contrasena"></label>
+                <input asp-for="usuarioLogin.contrasena" type="password" />
+                <span asp-validation-for="usuarioLogin.contrasena"></span>
+            </div>
+
+            <button type="submit">Ingresar</button>
+        </form>
+
+        <div class="forgot-password">
+            <a asp-page="/Account/Registro">¿No tienes cuenta? Regístrate aquí</a>
+        </div>
+    </div>
+</body>
+</html>
+

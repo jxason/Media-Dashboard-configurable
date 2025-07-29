@@ -26,8 +26,8 @@ builder.Services.AddHttpClient<CategoriaService>();
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
     {
-        options.LoginPath = "/Views/Account/Login"; // Ruta para inicio de sesión.
-        options.AccessDeniedPath = "/Views/Account/Login";  // Ruta para acceso denegado.
+        options.LoginPath = "/Account/Login"; // Ruta para inicio de sesión.
+        options.AccessDeniedPath = "/Account/Login";  // Ruta para acceso denegado.
     });
 
 builder.Services.AddAuthorization(options =>
@@ -65,7 +65,7 @@ app.MapRazorPages();
 
 app.MapGet("/", context =>
 {
-    context.Response.Redirect("/Views/Account/Login");
+    context.Response.Redirect("/Account/Login");
     return Task.CompletedTask;
 });
 

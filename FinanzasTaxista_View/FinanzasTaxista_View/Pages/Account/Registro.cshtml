@@ -1,0 +1,66 @@
+﻿@page
+@model FinanzasTaxista_View.Pages.Account.RegisterModel
+@{
+    ViewData["Title"] = "Registrar usuario";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/cuenta-vista.css" />
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <h2>Registrar usuario</h2>
+            <p class="login-subtitle">Completa los campos para crear tu cuenta</p>
+        </div>
+
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Input.nombre_usuario"></label>
+                <input asp-for="Input.nombre_usuario" class="form-control" />
+                <span asp-validation-for="Input.nombre_usuario" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Input.apellido1"></label>
+                <input asp-for="Input.apellido1" class="form-control" />
+                <span asp-validation-for="Input.apellido1" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Input.apellido2"></label>
+                <input asp-for="Input.apellido2" class="form-control" />
+                <span asp-validation-for="Input.apellido2" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Input.correo_electronico"></label>
+                <input asp-for="Input.correo_electronico" class="form-control" />
+                <span asp-validation-for="Input.correo_electronico" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Input.contrasena"></label>
+                <input asp-for="Input.contrasena" type="password" class="form-control" />
+                <span asp-validation-for="Input.contrasena" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Registrarse</button>
+        </form>
+
+        @if (!string.IsNullOrEmpty(Model.message))
+        {
+            <div class="alert alert-info mt-3">
+                <strong>@Model.message</strong>
+            </div>
+        }
+    </div>
+</body>
+</html>
