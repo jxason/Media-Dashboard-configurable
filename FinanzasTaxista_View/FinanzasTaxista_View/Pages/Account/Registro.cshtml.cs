@@ -3,7 +3,7 @@ using FinanzasTaxista_View.Service;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace FinanzasTaxista_View.Pages.Views.Account
+namespace FinanzasTaxista_View.Pages.Account
 {
     public class RegistroModel : PageModel
     {
@@ -33,7 +33,7 @@ namespace FinanzasTaxista_View.Pages.Views.Account
                 if (response)
                 {
                     message = "Usuario registrado correctamente.";
-                    return RedirectToPage("/Views/Account/Login");
+                    return RedirectToPage("/Account/IniciarSesion");
                 }
                 else
                 {

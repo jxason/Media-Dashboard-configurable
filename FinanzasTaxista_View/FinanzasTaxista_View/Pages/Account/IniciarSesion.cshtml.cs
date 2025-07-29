@@ -6,14 +6,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Security.Claims;
 
-namespace FinanzasTaxista_View.Pages.Views.Account
+namespace FinanzasTaxista_View.Pages.Account
 {
-    public class LoginModel : PageModel
+    public class IniciarSesionModel : PageModel
     {
         private readonly UsuarioService _usuarioService;
         private readonly RolService _rolService;
 
-        public LoginModel(UsuarioService usuarioService, RolService rolService)
+        public IniciarSesionModel(UsuarioService usuarioService, RolService rolService)
         {
             _usuarioService = usuarioService;
             _rolService = rolService;
