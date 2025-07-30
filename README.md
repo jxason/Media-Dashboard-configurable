@@ -36,6 +36,17 @@ Este proyecto consiste en el desarrollo de un **Media Dashboard configurable**, 
 - **Responsividad:** Bootstrap + Flexbox
 - **Control de dependencias:** Inyección de dependencias (DI) con `services.AddScoped<>`
 
+### 🍗 Paquetes NuGet utilizados en el proyecto
+- System.Text.Json: Utilizado para la serialización y deserialización de objetos en formato JSON. Ideal para la comunicación con APIs REST.
+- Microsoft.AspNetCore.Mvc.Core: Proporciona los componentes fundamentales para la construcción de aplicaciones web con Razor Pages o MVC en ASP.NET Core.
+- Microsoft.EntityFrameworkCore: Framework de acceso a datos basado en ORM (Object-Relational Mapping). Permite interactuar con bases de datos relacionales utilizando clases de C#.
+- Microsoft.EntityFrameworkCore.Design: Incluye herramientas necesarias para el diseño y mantenimiento de bases de datos, como la creación de migraciones.
+- Microsoft.EntityFrameworkCore.SqlServer: Proveedor específico de Entity Framework Core para bases de datos SQL Server.
+- Microsoft.EntityFrameworkCore.Tools: Herramientas de línea de comandos (CLI) para trabajar con Entity Framework Core desde el entorno de desarrollo.
+- Microsoft.Extensions.Configuration.Json: Permite cargar configuraciones desde archivos appsettings.json, muy útil para manejar variables del entorno, cadenas de conexión, etc.
+- Swashbuckle.AspNetCore: Se utiliza para generar documentación interactiva de APIs mediante Swagger UI. Muy útil para probar y documentar endpoints HTTP.
+- BCrypt.Net-Next: Proporciona funcionalidades de hashing seguro de contraseñas utilizando el algoritmo bcrypt, ampliamente recomendado en aplicaciones web.
+
 ### 🧠 Principios SOLID aplicados
 - **S (Single Responsibility):** Controladores y servicios desacoplados por funcionalidad  
 - **O (Open/Closed):** Código preparado para extensiones de tipos de widgets sin modificar el núcleo  
