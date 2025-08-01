@@ -25,7 +25,6 @@ namespace FinanzasTaxista_Api.DTO_s
         [StringLength(16, MinimumLength = 8)]
         [RegularExpression(@"^(?=(?:[^A-Za-z]*[A-Za-z]){3,})(?=(?:[^0-9]*[0-9]){3,})(?=[^!@#$%^&*(),.?\:{}|<>]*[!@#$%^&*(),.?\:{}|<>]).{8,16}$",
         ErrorMessage = "La contraseña debe tener entre 8 y 16 caracteres, al menos 3 letras, 3 números y 1 símbolo.")]
-
         public string contrasena { get; set; }
 
     

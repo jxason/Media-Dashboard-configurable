@@ -9,7 +9,7 @@ using BCrypt.Net;
 
 namespace FinanzasTaxista_Api.Controllers
 {
-
+    [ApiController]
     [Route("api/[controller]")]
     public class UsuarioController : Controller
     {
@@ -44,7 +44,7 @@ namespace FinanzasTaxista_Api.Controllers
 
             return usuario;
         }
-
+        /**********************************************************************************************************************************************************************************************************************/
         // POST: api/Usuario/registrar
 
         [HttpPost("registrar")]
@@ -115,7 +115,6 @@ namespace FinanzasTaxista_Api.Controllers
                 return Unauthorized("Usuario/correo o contraseña inválidos");
 
             // Aquí mas adelante se podra generar un token JWT o usar una cookie para autenticación o usar sp's como el sp dia_trabajo
-            //mas adelante por que tengo sueño jaja aunque seguro esto lo haga yo ya que nadie esta avanzado xd haganme retractarme
 
             return Ok(new
             {
@@ -131,7 +130,7 @@ namespace FinanzasTaxista_Api.Controllers
             // Si todo sale good simplemente retornamos un mensaje de login exitoso y el usuario con su id, nombre, correo y rol
             // la idea es que el front pueda usar esto para mostrar el usuario logueado y su rol en la aplicacion
         }
-
+        /**********************************************************************************************************************************************************************************************************************/
 
 
         [HttpPost]

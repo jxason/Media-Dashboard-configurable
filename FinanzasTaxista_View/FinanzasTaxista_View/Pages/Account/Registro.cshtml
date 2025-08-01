@@ -21,39 +21,33 @@
 
         <form method="post">
             <div class="form-group">
-                <label asp-for="_usuarioModel.id_rol" class="form-label">ID de rol</label>
-                <input asp-for="_usuarioModel.id_rol" type="number" class="form-input" />
-                <span asp-validation-for="_usuarioModel.id_rol" class="text-danger"></span>
+                <label asp-for="Input.nombre_usuario" class="form-label">Nombre de usuario</label>
+                <input asp-for="Input.nombre_usuario" class="form-input" />
+                <span asp-validation-for="Input.nombre_usuario" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="_usuarioModel.nombre_usuario" class="form-label">Nombre de usuario</label>
-                <input asp-for="_usuarioModel.nombre_usuario" class="form-input" />
-                <span asp-validation-for="_usuarioModel.nombre_usuario" class="text-danger"></span>
+                <label asp-for="Input.apellido1" class="form-label">Primer apellido</label>
+                <input asp-for="Input.apellido1" class="form-input" />
+                <span asp-validation-for="Input.apellido1" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="_usuarioModel.apellido1" class="form-label">Primer apellido</label>
-                <input asp-for="_usuarioModel.apellido1" class="form-input" />
-                <span asp-validation-for="_usuarioModel.apellido1" class="text-danger"></span>
+                <label asp-for="Input.apellido2" class="form-label">Segundo apellido</label>
+                <input asp-for="Input.apellido2" class="form-input" />
+                <span asp-validation-for="Input.apellido2" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="_usuarioModel.apellido2" class="form-label">Segundo apellido</label>
-                <input asp-for="_usuarioModel.apellido2" class="form-input" />
-                <span asp-validation-for="_usuarioModel.apellido2" class="text-danger"></span>
+                <label asp-for="Input.correo_electronico" class="form-label">Correo electrónico</label>
+                <input asp-for="Input.correo_electronico" type="email" class="form-input" />
+                <span asp-validation-for="Input.correo_electronico" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="_usuarioModel.correo_electronico" class="form-label">Correo electrónico</label>
-                <input asp-for="_usuarioModel.correo_electronico" type="email" class="form-input" />
-                <span asp-validation-for="_usuarioModel.correo_electronico" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="_usuarioModel.contrasena" class="form-label">Contraseña</label>
-                <input asp-for="_usuarioModel.contrasena" type="password" class="form-input" />
-                <span asp-validation-for="_usuarioModel.contrasena" class="text-danger"></span>
+                <label asp-for="Input.contrasena" class="form-label">Contraseña</label>
+                <input asp-for="Input.contrasena" type="password" class="form-input" />
+                <span asp-validation-for="Input.contrasena" class="text-danger"></span>
             </div>
 
             <button type="submit" class="btn-login">Registrar</button>

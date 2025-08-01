@@ -1,52 +1,49 @@
-using FinanzasTaxista_View.Models;
+using FinanzasTaxista_View.Models.DTO_s;
 using FinanzasTaxista_View.Service;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using FinanzasTaxista_View.Models;
+using FinanzasTaxista_View.DTO_s;
+
 
 namespace FinanzasTaxista_View.Pages.Account
 {
     public class RegistroModel : PageModel
     {
-        private readonly UsuarioService _usuarioService;
+        private readonly UsuarioService _usuariosService;
 
-        public RegistroModel(UsuarioService usuarioService)
+        public RegistroModel(UsuarioService usuariosService)
         {
-            _usuarioService = usuarioService;
+            _usuariosService = usuariosService;
         }
 
         [BindProperty]
-        public UsuarioModel _usuarioModel { get; set; } = new();
+        public UsuarioRegisterDTO Input { get; set; }
 
-        public string message { get; set; } = string.Empty;
+        public string? message { get; set; }
+
+        public void OnGet()
+        {
+            // Página cargada
+        }
 
         public async Task<IActionResult> OnPostAsync()
         {
-            try
+            if (!ModelState.IsValid)
             {
-                if (!ModelState.IsValid)
-                {
-                    message = "Datos inválidos.";
-                    return Page();
-                }
-
-                var response = await _usuarioService.AddUsuarioAsync(_usuarioModel);
-                if (response)
-                {
-                    message = "Usuario registrado correctamente.";
-                    return RedirectToPage("/Account/IniciarSesion");
-                }
-                else
-                {
-                    message = "Error al registrar el usuario.";
-                    return Page();
-                }
-            }
-            catch (Exception ex)
-            {
-                message = $"Ocurrió un error: {ex.Message}";
                 return Page();
             }
+
+            var resultado = await _usuariosService.RegisterAsync(Input);
+
+            if (resultado.Exito)
+            {
+                message = "Usuario registrado con éxito.";
+                return RedirectToPage("/Account/IniciarSesion");
+            }
+
+            message = $"Error al registrar usuario. Verifique los datos. {resultado.Mensaje}";
+            return Page();
         }
     }
 }
-

@@ -1,8 +1,9 @@
 ﻿using System.Text.Json;
-using FinanzasTaxista_View.Models; 
+using FinanzasTaxista_View.Models;
 using System.Text;
 using FinanzasTaxista_View.DTO_s;
 using FinanzasTaxista_View.Models.DTO_s;
+using FinanzasTaxista_View.Service;
 
 
 namespace FinanzasTaxista_View.Service
@@ -13,15 +14,18 @@ namespace FinanzasTaxista_View.Service
 
         private readonly HttpClient _httpClient;
         private readonly string _apiUrl;
+        private readonly RolService _rolService;// Servicio para obtener roles dinámicamente
 
-        public UsuarioService(HttpClient httpClient, IConfiguration configuration)
+        public UsuarioService(HttpClient httpClient, IConfiguration configuration, RolService rolService/*Obtener el rol dinamicamente*/)
         {
             _httpClient = httpClient;
             _apiUrl = configuration["ApiUrl"] + "Usuario/";
+            _rolService = rolService;// Obtener el rol dinamicamente
         }
 
-        // Método para obtener todos los usuarios.
 
+
+        // Método para obtener todos los usuarios.
         public async Task<List<UsuarioModel>> GetUsuariosAsync()
         {
             var response = await _httpClient.GetAsync(_apiUrl);
@@ -82,12 +86,52 @@ namespace FinanzasTaxista_View.Service
             return response;
         }
 
-        // Método para registrar un nuevo usuario.
-        public async Task<bool> RegisterAsync(UsuarioRegisterDTO dto)
+        // Metodo para registrar un nuevo usuario.
+        public async Task<ResultadoRegistro> RegisterAsync(UsuarioRegisterDTO dto, string nombreRol = "invitado")
         {
-            var response = await _httpClient.PostAsJsonAsync(_apiUrl + "register", dto);
-            return response.IsSuccessStatusCode;
+            // Buscar rol dinamicamente por nombre
+            var rol = await _rolService.GetRolPorNombreAsync(nombreRol);
+            if (rol == null)
+            {
+                return new ResultadoRegistro
+                {
+                    Exito = false,
+                    Mensaje = $"No se pudo obtener el rol '{nombreRol}' desde la API."
+                };
+            }
+
+            // Crear objeto UsuarioModel con el ID del rol encontrado
+            var usuario = new UsuarioModel
+            {
+                nombre_usuario = dto.nombre_usuario,
+                apellido1 = dto.apellido1,
+                apellido2 = dto.apellido2 ?? "",
+                correo_electronico = dto.correo_electronico,
+                contrasena = dto.contrasena,
+                id_rol = rol.id
+            };
+
+            var jsonUser = JsonSerializer.Serialize(usuario);
+            var content = new StringContent(jsonUser, Encoding.UTF8, "application/json");
+
+            try
+            {
+                var response = await _httpClient.PostAsync(_apiUrl, content);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    var error = await response.Content.ReadAsStringAsync();
+                    return new ResultadoRegistro { Exito = false, Mensaje = error };
+                }
+
+                return new ResultadoRegistro { Exito = true };
+            }
+            catch (Exception ex)
+            {
+                return new ResultadoRegistro { Exito = false, Mensaje = ex.Message };
+            }
         }
+
 
 
     }

@@ -68,6 +68,21 @@ namespace FinanzasTaxista_View.Service
 
         }
 
+        // Obtener el rol por nombre(esto se creo para buscar el rol invitado pero se puede reutilizar mas adelante)
+        public async Task<RolModel?> GetRolPorNombreAsync(string nombreRol)
+        {
+            var response = await _httpClient.GetAsync($"{_apiUrl}nombre?nombre={nombreRol}");
+            if (response.IsSuccessStatusCode)
+            {
+                var json = await response.Content.ReadAsStringAsync();
+                return JsonSerializer.Deserialize<RolModel>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            }
+
+            return null;
+        }
+
+
+
 
     }
 }

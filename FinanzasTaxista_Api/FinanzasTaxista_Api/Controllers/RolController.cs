@@ -76,6 +76,18 @@ namespace FinanzasTaxista_Api.Controllers
             return Ok();
 
         }
-    
+
+        // Nos va permitir buscar roles por nombre, esto por que todos tenemos diferentes ID en nuestras BD ademas es más amigable para el usuario.
+        [HttpGet("nombre")]
+        public async Task<IActionResult> GetRolPorNombre([FromQuery] string nombre)
+        {
+            var rol = await _context.rol.FirstOrDefaultAsync(r => r.nombre_rol == nombre);
+            if (rol == null)
+                return NotFound("Rol no encontrado.");
+
+            return Ok(rol);
+        }
     }
+
 }
+
