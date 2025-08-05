@@ -1,0 +1,47 @@
+﻿@page
+@model FinanzasTaxista_View.Pages.Views.IngresosViewModel
+@{
+    ViewData["Title"] = "Lista de ingresos de los viajes";
+}
+
+<!-- Enlace al archivo CSS personalizado -->
+<link rel="stylesheet" href="~/css/usuarios-vista.css" />
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="mb-3">
+    <a class="btn btn-primary" asp-page="/Views/ViajeCRUD/Crear" role="button">
+        Agregar nuevo ingreso
+    </a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Id usuario</th>
+            <th>Id dia</th>
+            <th>Id categoria</th>
+            <th>Monto</th>
+            <th>Ubicacion</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var viaje in Model._Viajes)
+        {
+            <tr>
+                <td>@viaje.id</td>
+                <td>@viaje.id_usuario</td>
+                <td>@viaje.id_dia</td>
+                <td>@viaje.id_categoria</td>
+                <td>@viaje.monto</td>
+                <td>@viaje.ubicacion</td>
+                <td>
+                    <a class="btn btn-success" asp-page="/Views/ViajeCRUD/Editar" asp-route-id="@viaje.id" role="button">Editar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

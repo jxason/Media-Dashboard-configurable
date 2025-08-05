@@ -1,0 +1,67 @@
+﻿@page
+@model FinanzasTaxista_View.Pages.Views.ViajeCRUD.EditarModel
+@{
+    ViewData["Title"] = "Editar viaje";
+}
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/formulario-vista.css" />
+</head>
+<body>
+    <div class="page-container">
+        <div class="form-container">
+            <h2>Editar viaje</h2>
+
+            <form method="post">
+                <input asp-for="_viajeModel.id" type="hidden" />
+                
+                <div class="form-group">
+                    <label asp-for="_viajeModel.id_usuario">Id usuario</label>
+                    <input asp-for="_viajeModel.id_usuario" type="number" class="form-control" />
+                    <span asp-validation-for="_viajeModel.id_usuario" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="_viajeModel.id_dia">Id día de trabajo</label>
+                    <input asp-for="_viajeModel.id_dia" type="number" class="form-control" />
+                    <span asp-validation-for="_viajeModel.id_dia" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="_viajeModel.id_categoria">Id categoría</label>
+                    <input asp-for="_viajeModel.id_categoria" type="number" class="form-control" />
+                    <span asp-validation-for="_viajeModel.id_categoria" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="_viajeModel.monto">Monto</label>
+                    <input asp-for="_viajeModel.monto" type="number" step="0.01" class="form-control" />
+                    <span asp-validation-for="_viajeModel.monto" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="_viajeModel.ubicacion">Ubicación</label>
+                    <input asp-for="_viajeModel.ubicacion" type="text" maxlength="200" class="form-control" />
+                    <span asp-validation-for="_viajeModel.ubicacion" class="text-danger"></span>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">Actualizar viaje</button>
+                    <a asp-page="/Views/IngresosView" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </form>
+
+            @if (!string.IsNullOrEmpty(Model.message))
+            {
+                <div class="message">
+                    <strong>@Model.message</strong>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+</html>
+
