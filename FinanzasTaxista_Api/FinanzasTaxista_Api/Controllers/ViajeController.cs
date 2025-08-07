@@ -78,5 +78,21 @@ namespace FinanzasTaxista_Api.Controllers
 
         }
 
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteViaje(int id)
+        {
+            var viaje = await _context.viaje.FindAsync(id);
+            if (viaje == null)
+            {
+                return NotFound();
+            }
+
+            _context.viaje.Remove(viaje);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+
+        }
+
     }
 }

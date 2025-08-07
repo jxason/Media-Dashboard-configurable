@@ -18,6 +18,7 @@ namespace FinanzasTaxista_Api.DBContext
         public DbSet<DiaTrabajo> dia_trabajo { get; set; }
         public DbSet<Categoria> categoria { get; set; }
         public DbSet<Viaje> viaje { get; set; }
+        public DbSet<Gasto> gasto { get; set; }
 
 
     }

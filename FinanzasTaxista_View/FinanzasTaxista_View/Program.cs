@@ -20,6 +20,7 @@ builder.Services.AddHttpClient<RolService>();
 builder.Services.AddHttpClient<DiaTrabajoService>();
 builder.Services.AddHttpClient<CategoriaService>();
 builder.Services.AddHttpClient<ViajeService>();
+builder.Services.AddHttpClient<GastoService>();
 
 // -------------------------------------------
 // Autenticación y autorización

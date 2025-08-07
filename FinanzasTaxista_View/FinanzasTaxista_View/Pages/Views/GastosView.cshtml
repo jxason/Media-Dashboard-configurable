@@ -1,0 +1,44 @@
+﻿@page
+@model FinanzasTaxista_View.Pages.Views.GastosViewModel
+@{
+    ViewData["Title"] = "Lista de gastos";
+}
+
+<!-- Enlace al archivo CSS personalizado -->
+<link rel="stylesheet" href="~/css/usuarios-vista.css" />
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="mb-3">
+    <a class="btn btn-primary" asp-page="/Views/GastoCRUD/Crear" role="button">
+        Agregar nuevo gasto
+    </a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Id usuario</th>
+            <th>Id dia</th>
+            <th>Id categoria</th>
+            <th>Monto</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var gasto in Model._Gastos)
+        {
+            <tr>
+                <td>@gasto.id</td>
+                <td>@gasto.id_usuario</td>
+                <td>@gasto.id_dia</td>
+                <td>@gasto.id_categoria</td>
+                <td>@gasto.monto</td>
+                <td>
+                    <a class="btn btn-success" asp-page="/Views/GastoCRUD/Editar" asp-route-id="@gasto.id" role="button">Editar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
