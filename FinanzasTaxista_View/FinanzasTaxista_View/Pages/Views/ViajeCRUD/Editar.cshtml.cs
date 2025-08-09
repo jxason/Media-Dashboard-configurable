@@ -1,11 +1,13 @@
 using FinanzasTaxista_View.Models;
 using FinanzasTaxista_View.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 
 namespace FinanzasTaxista_View.Pages.Views.ViajeCRUD
 {
+    [Authorize(Roles = "Taxista")]
     public class EditarModel : PageModel
     {
         private readonly ViajeService _viajeService;
@@ -24,7 +26,7 @@ namespace FinanzasTaxista_View.Pages.Views.ViajeCRUD
         {
             var viaje = await _viajeService.GetViajesAsync();
 
-            _viajeModel = viaje.FirstOrDefault(u => u.id == id);
+            _viajeModel = viaje.FirstOrDefault(v => v.id == id);
 
             if (_viajeModel == null)
             {

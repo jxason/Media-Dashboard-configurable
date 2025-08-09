@@ -56,6 +56,12 @@ namespace FinanzasTaxista_View.Service
 
         }
 
+        public async Task<bool> DeleteViajeAsync(int id)
+        {
+            var response = await _httpClient.DeleteAsync($"{_apiUrl}{id}");
+            return response.IsSuccessStatusCode;
+        }
+
     }
 
 }

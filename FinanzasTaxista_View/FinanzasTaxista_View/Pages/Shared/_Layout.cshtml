@@ -37,6 +37,11 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Views/GastosView">Gastos</a>
                         </li>
+                        <ul class="navbar-item">
+                            <form method="post" asp-page="/Account/CerrarSesion">
+                                <button type="submit" class="nav-link text-dark">Cerrar sesión</button>
+                            </form>
+                        </ul>
                     </ul>
                 </div>
             </div>

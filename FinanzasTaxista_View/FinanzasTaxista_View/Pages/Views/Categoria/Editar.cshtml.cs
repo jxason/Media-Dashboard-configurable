@@ -1,11 +1,13 @@
 using FinanzasTaxista_View.Models;
 using FinanzasTaxista_View.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 
 namespace FinanzasTaxista_View.Pages.Views.Categoria
 {
+    [Authorize(Roles = "Administrador")]
     public class EditarModel : PageModel
     {
         private readonly CategoriaService _categoriaService;

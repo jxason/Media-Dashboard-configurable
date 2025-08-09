@@ -6,12 +6,13 @@ using FinanzasTaxista_View.Service;
 
 namespace FinanzasTaxista_View.Pages.Views
 {
+    [Authorize(Roles = "Administrador")]
     public class UsuariosViewModel : PageModel
     {
-     private readonly UsuarioService _usuariosService;
-      
-
-    public UsuariosViewModel(UsuarioService usuariosService)
+     
+        private readonly UsuarioService _usuariosService;
+        
+        public UsuariosViewModel(UsuarioService usuariosService)
         {
             _usuariosService = usuariosService;
         }

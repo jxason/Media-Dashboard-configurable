@@ -1,11 +1,13 @@
 using FinanzasTaxista_View.Models;
 using FinanzasTaxista_View.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 
 namespace FinanzasTaxista_View.Pages.Views.GastoCRUD
 {
+    [Authorize(Roles = "Taxista")]
     public class EditarModel : PageModel
     {
         private readonly GastoService _gastoService;

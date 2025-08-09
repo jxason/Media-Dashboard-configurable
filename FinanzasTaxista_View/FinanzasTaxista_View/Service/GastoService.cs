@@ -41,7 +41,7 @@ namespace FinanzasTaxista_View.Service
 
         }
 
-        // Método para actualizar un viaje por ID.
+        // Método para actualizar un gasto por ID.
         public async Task<bool> UpdateGastoAsync(GastoModel gasto)
         {
 
@@ -51,6 +51,12 @@ namespace FinanzasTaxista_View.Service
 
             return response.IsSuccessStatusCode;
 
+        }
+
+        public async Task<bool> DeleteGastoAsync(int id)
+        {
+            var response = await _httpClient.DeleteAsync($"{_apiUrl}{id}");
+            return response.IsSuccessStatusCode;
         }
 
     }
