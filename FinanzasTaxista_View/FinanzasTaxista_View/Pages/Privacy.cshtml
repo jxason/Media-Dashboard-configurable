@@ -1,8 +1,79 @@
 ﻿@page
 @model PrivacyModel
 @{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Finanzas Taxista - Control de Ingresos y Gastos";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/css/PrivacyPageStyle.css">
+
+</head>
+<body>
+    <header class="container">
+        <h1>@ViewData["Title"]</h1>
+        <p class="tagline">La solución inteligente para gestionar las finanzas de tu negocio de taxi</p>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2 style="text-align: center; color: var(--primary-color);">Optimiza tus ganancias con nuestro dashboard inteligente</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem auto;">
+                Finanzas Taxista te ofrece herramientas poderosas para analizar tus ingresos, gastos y rendimiento en tiempo real.
+                Toma decisiones informadas y maximiza tus ganancias con nuestra plataforma especializada para conductores profesionales.
+            </p>
+
+            <div style="text-align: center;">
+                <img src="https://via.placeholder.com/800x450?text=Dashboard+Finanzas+Taxista" alt="Vista previa del dashboard" class="dashboard-preview">
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3 class="feature-title">Análisis Detallado</h3>
+                <p>Visualiza tus ingresos diarios, semanales y mensuales con gráficos interactivos que te muestran tendencias y patrones.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">💸</div>
+                <h3 class="feature-title">Control de Gastos</h3>
+                <p>Registra y categoriza tus gastos (combustible, mantenimiento, etc.) para entender mejor tus costos operativos.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⏱️</div>
+                <h3 class="feature-title">Rendimiento por Horario</h3>
+                <p>Identifica las horas y días más rentables para optimizar tu horario de trabajo y aumentar tus ganancias.</p>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2 style="color: var(--primary-color);">¿Listo para tomar el control de tus finanzas?</h2>
+            <p>Regístrate hoy y comienza a gestionar tu negocio de taxi como un profesional.</p>
+            <a href="#" class="btn">Comenzar ahora</a>
+        </section>
+
+        <section>
+            <h2 style="text-align: center; color: var(--primary-color); margin-top: 3rem;">Beneficios Clave</h2>
+            <ul style="max-width: 600px; margin: 1rem auto; line-height: 1.8;">
+                <li><strong>Ahorro de tiempo:</strong> Automatiza el registro de tus viajes y gastos.</li>
+                <li><strong>Mayor rentabilidad:</strong> Identifica qué servicios son más rentables.</li>
+                <li><strong>Preparación para impuestos:</strong> Genera reportes fiscales automáticamente.</li>
+                <li><strong>Acceso móvil:</strong> Consulta tus datos desde cualquier lugar.</li>
+                <li><strong>Seguridad:</strong> Tus datos están protegidos y respaldados.</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 Finanzas Taxista - Todos los derechos reservados</p>
+            <p>contacto@finanzastaxista.com | Tel: +1 234 567 890</p>
+        </div>
+    </footer>
+</body>
+</html>
