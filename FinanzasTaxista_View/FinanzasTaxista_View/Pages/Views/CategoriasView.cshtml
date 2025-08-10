@@ -4,6 +4,12 @@
     ViewData["Title"] = "Lista de categorias";
 }
 
+
+<!-- Enlace al archivo CSS personalizado -->
+<link rel="stylesheet" href="~/css/usuarios-vista.css" asp-append-version="true" />
+
+<h2>@ViewData["Title"]</h2>
+
 <div class="d-flex justify-content-end mb-3">
     <a class="btn btn-primary" asp-page="/Views/Categoria/Crear">
         <i class="fas fa-plus"></i> Agregar categoría

@@ -1,22 +1,69 @@
-html {
-  font-size: 14px;
+/* ===== NAVBAR PERSONALIZADA ===== */
+.navbar {
+    background: linear-gradient(135deg, #dc143c 0%, #ff6b6b 100%);
+    box-shadow: 0 4px 20px rgba(220, 20, 60, 0.3);
+    padding: 0.8rem 1rem;
+    border-bottom: none;
+    animation: slideDown 0.6s ease-out;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.navbar-brand {
+    color: white !important;
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    .navbar-brand:hover {
+        transform: scale(1.05);
+    }
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: 500;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+    .navbar-nav .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+        transform: translateY(-2px);
+    }
+
+.navbar-toggler {
+    border: none;
 }
 
-body {
-  margin-bottom: 60px;
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* Botón Cerrar Sesión estilo degradado */
+.navbar form button {
+    background: linear-gradient(135deg, #ff6b6b 0%, #dc143c 100%);
+    color: white;
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+    .navbar form button:hover {
+        box-shadow: 0 8px 20px rgba(220, 20, 60, 0.4);
+        transform: translateY(-2px);
+    }
+
+/* Animación de entrada */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
