@@ -1,43 +1,42 @@
-﻿/* estilos.css actualizado */
-
-/* General table styling */
+﻿/* ===== Estilo de tabla suave y armónico con navbar ===== */
 table.table {
     width: 100%;
     border-collapse: collapse;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px; /* Tamaño de fuente aumentado */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    font-size: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     margin-top: 24px;
 }
 
-    /* Table headers */
+    /* Encabezados */
     table.table th {
-        background-color: #4A90E2;
-        color: white;
+        background-color: #f8d7da; /* Rojo pastel suave */
+        color: #6b0f1a; /* Rojo oscuro para contraste */
         text-align: left;
-        padding: 16px; /* Espaciado mayor para mejor lectura */
+        padding: 16px;
         font-size: 15px;
         text-transform: uppercase;
+        font-weight: 600;
     }
 
-    /* Table rows */
+    /* Filas */
     table.table td {
         padding: 16px;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid #eee;
         font-size: 15px;
     }
 
-    /* Alternate row color */
+    /* Filas alternas */
     table.table tr:nth-child(even) {
-        background-color: #f9f9f9;
+        background-color: #fdf5f5; /* Blanco con tinte cálido */
     }
 
-    /* Hover effect */
+    /* Hover */
     table.table tr:hover {
-        background-color: #e6f2ff;
+        background-color: #faeaea; /* Suave rojizo claro */
     }
 
-/* Action buttons */
+/* Botones */
 a.btn {
     padding: 8px 14px;
     margin-right: 6px;
@@ -45,23 +44,54 @@ a.btn {
     border-radius: 5px;
     font-weight: 600;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-/* Specific colors for actions */
+/* Eliminar */
 a.btn-danger {
-    background-color: #e74c3c;
+    background-color: #f28b82; /* Coral claro */
     color: white;
 }
 
     a.btn-danger:hover {
-        background-color: #c0392b;
+        background-color: #d66b5c;
     }
 
+/* Editar */
 a.btn-success {
-    background-color: #2ecc71;
+    background-color: #81c995; /* Verde menta */
     color: white;
 }
 
     a.btn-success:hover {
-        background-color: #27ae60;
+        background-color: #67a97d;
+    }
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem; /* Tamaño grande */
+    font-weight: bold;
+    color: #333; /* gris oscuro */
+    border-bottom: 3px solid #dc3545; /* Línea inferior roja */
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    letter-spacing: 1px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Título en mayúsculas */
+}
+
+.d-flex.justify-content-end.mb-3 {
+    /* puedes dejar así o ajustar margenes si quieres */
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    background-color: #628ff1; /* azul suave */
+    border-color: #628ff1;
+    color: white;
+}
+
+    .btn-primary:hover {
+        background-color: #4b73d1; /* azul un poco más oscuro */
+        border-color: #4b73d1;
+        color: white;
     }

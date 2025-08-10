@@ -5,11 +5,11 @@
 }
 
 <!-- Enlace al archivo CSS personalizado -->
-<link rel="stylesheet" href="~/css/usuarios-vista.css" />
+<link rel="stylesheet" href="~/css/usuarios-vista.css" asp-append-version="true" />
 
 <h2>@ViewData["Title"]</h2>
 
-<div class="mb-3">
+<div class="d-flex justify-content-end mb-3">
     <a class="btn btn-primary" asp-page="/Views/ViajeCRUD/Crear" role="button">
         Agregar nuevo ingreso
     </a>

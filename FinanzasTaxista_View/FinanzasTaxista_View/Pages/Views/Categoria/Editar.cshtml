@@ -1,27 +1,43 @@
 ﻿@page "{id:int}"
 @model FinanzasTaxista_View.Pages.Views.Categoria.EditarModel
 @{
-    ViewData["Title"] = "Editar categoria";
+    ViewData["Title"] = "Editar categoría";
 }
 
-<h2>Editar usuario</h2>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/formulario-vista.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="page-container">
+        <div class="form-container">
+            <h2>Editar categoría</h2>
 
-<form method="post">
+            <form method="post">
+                <input asp-for="_categoriaModel.id" type="hidden" />
 
-    <input asp-for="_categoriaModel.id" type="hidden" />
-    
-    <div class="form-group">
-        <label asp-for="_categoriaModel.nombre_categoria"></label>
-        <input asp-for="_categoriaModel.nombre_categoria" class="form-control" />
-        <span asp-validation-for="_categoriaModel.nombre_categoria" class="text-danger"></span>
+                <div class="form-group">
+                    <label asp-for="_categoriaModel.nombre_categoria">Nombre de categoría</label>
+                    <input asp-for="_categoriaModel.nombre_categoria" class="form-control" />
+                    <span asp-validation-for="_categoriaModel.nombre_categoria" class="text-danger"></span>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">Actualizar</button>
+                    <a asp-page="/Views/CategoriasView" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </form>
+
+            @if (!string.IsNullOrEmpty(Model.message))
+            {
+                <div class="message">
+                    <strong>@Model.message</strong>
+                </div>
+            }
+        </div>
     </div>
-    <button type="submit" class="btn btn-primary">Actualizar</button>
-    <a asp-page="/Views/UsuariosView" class="btn btn-secondary">Cancelar</a>
-</form>
-
-
-
-
-
-
-
+</body>
+</html>

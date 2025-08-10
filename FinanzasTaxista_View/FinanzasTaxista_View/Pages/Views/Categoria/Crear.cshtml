@@ -1,18 +1,46 @@
 ﻿@page
 @model FinanzasTaxista_View.Pages.Views.Categoria.CrearModel
+@{
+    ViewData["Title"] = "Agregar nueva categoría";
+}
 
-<div class="container mt-4">
-    <h2 class="mb-3">Agregar nueva categoría</h2>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/formulario-vista.css" asp-append-version="true" />
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+    <div class="page-container">
+        <div class="form-container">
+            <h2>Agregar nueva categoría</h2>
 
-    <form method="post">
+            <form method="post">
+                <div class="form-group">
+                    <label asp-for="_categoriaModel.nombre_categoria">Nombre de la categoría</label>
+                    <input asp-for="_categoriaModel.nombre_categoria" class="form-control" />
+                    <span asp-validation-for="_categoriaModel.nombre_categoria" class="text-danger"></span>
+                </div>
 
-        <div class="mb-3">
-            <label class="form-label">Nombre de la categoría</label>
-            <input asp-for="_categoriaModel.nombre_categoria" class="form-control" />
-            <span asp-validation-for="_categoriaModel.nombre_categoria" class="text-danger"></span>
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                    <a asp-page="/Views/CategoriasView" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </form>
+
+            @if (!string.IsNullOrEmpty(Model.message))
+            {
+                <div class="message">
+                    <strong>@Model.message</strong>
+                </div>
+            }
         </div>
+    </div>
+</body>
+</html>
 
-        <button type="submit" class="btn btn-primary">Guardar</button>
-        <a asp-page="/Views/CategoriasView" class="btn btn-secondary">Cancelar</a>
-    </form>
-</div>
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
