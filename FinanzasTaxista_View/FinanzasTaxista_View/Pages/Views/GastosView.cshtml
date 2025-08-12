@@ -33,7 +33,7 @@
                 <td>@gasto.id</td>
                 <td>@gasto.id_usuario</td>
                 <td>@gasto.id_dia</td>
-                <td>@gasto.id_categoria</td>
+                <td>@Model.NombreCategoria(gasto.id_categoria)</td>
                 <td>@gasto.monto</td>
                 <td>
                     <a class="btn btn-success" asp-page="/Views/GastoCRUD/Editar" asp-route-id="@gasto.id" role="button">Editar</a>

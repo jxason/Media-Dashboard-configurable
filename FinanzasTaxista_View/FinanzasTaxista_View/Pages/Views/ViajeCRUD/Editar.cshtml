@@ -31,8 +31,12 @@
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="_viajeModel.id_categoria">Id categoría</label>
-                    <input asp-for="_viajeModel.id_categoria" type="number" class="form-control" />
+                    <label asp-for="_viajeModel.id_categoria">Categoría</label>
+                    <select asp-for="_viajeModel.id_categoria"
+                            class="form-control"
+                            asp-items="Model.CategoriasLista">
+                        <option value="">-- Seleccione una categoría --</option>
+                    </select>
                     <span asp-validation-for="_viajeModel.id_categoria" class="text-danger"></span>
                 </div>
 

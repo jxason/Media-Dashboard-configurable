@@ -138,3 +138,31 @@ a.btn-secondary {
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     border-radius: 6px;
 }
+
+/* ======== SELECT ======== */
+select.form-control {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #f0cfcf;
+    border-radius: 6px;
+    background-color: #fff8f8;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-size: 1em;
+    color: #4b1f1f; 
+}
+
+    select.form-control:focus {
+        outline: none;
+        border-color: #f28b82;
+        background-color: #ffffff;
+        box-shadow: 0 0 0 3px rgba(242, 139, 130, 0.2);
+    }
+
+    /* Opciones dentro del select */
+    select.form-control option {
+        background-color: #fff8f8;
+        color: #4b1f1f;
+        padding: 8px;
+    }
