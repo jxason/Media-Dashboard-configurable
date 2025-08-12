@@ -6,7 +6,7 @@ using FinanzasTaxista_View.Service;
 
 namespace FinanzasTaxista_View.Pages.Views
 {
-    [Authorize(Roles = "Taxista")]
+   
     public class GastosViewModel : PageModel
     {
         private readonly GastoService _gastoService;

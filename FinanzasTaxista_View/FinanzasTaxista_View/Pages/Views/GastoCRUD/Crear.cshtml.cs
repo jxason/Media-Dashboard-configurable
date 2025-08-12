@@ -7,7 +7,7 @@ using System.Data;
 
 namespace FinanzasTaxista_View.Pages.Views.GastoCRUD
 {
-    [Authorize(Roles = "Taxista")]
+   
     public class CrearModel : PageModel
     {
         private readonly GastoService _gastoService;

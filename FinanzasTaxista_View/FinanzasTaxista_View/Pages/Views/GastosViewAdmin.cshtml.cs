@@ -7,23 +7,23 @@ using FinanzasTaxista_View.Service;
 namespace FinanzasTaxista_View.Pages.Views
 {
    
-    public class IngresosViewModel : PageModel
+    public class GastosViewAdminModel : PageModel
     {
-        private readonly ViajeService _viajeService;
+        private readonly GastoService _gastoService;
 
 
-        public IngresosViewModel(ViajeService viajeService)
+        public GastosViewAdminModel(GastoService gastoService)
         {
-            _viajeService = viajeService;
+            _gastoService = gastoService;
         }
 
-        
-        public List<ViajeModel> _Viajes { get; set; } = new List<ViajeModel>();
-        
+
+        public List<GastoModel> _Gastos { get; set; } = new List<GastoModel>();
+
         /*public async Task OnGetAsync()
         {
 
-            _Viajes = await _viajeService.GetViajesAsync();
+            _Gastos = await _gastoService.GetGastosAsync();
         }*/
 
         public async Task OnGetAsync()
@@ -32,13 +32,13 @@ namespace FinanzasTaxista_View.Pages.Views
 
             if (string.IsNullOrEmpty(userIdClaim))
             {
-                _Viajes = new List<ViajeModel>();
+                _Gastos = new List<GastoModel>();
                 return;
             }
 
-            var todosLosViajes = await _viajeService.GetViajesAsync();
+            var todosLosGastos = await _gastoService.GetGastosAsync();
 
-            _Viajes = todosLosViajes
+            _Gastos = todosLosGastos
                 .Where(v => v.id_usuario.ToString() == userIdClaim)
                 .ToList();
         }
@@ -46,4 +46,3 @@ namespace FinanzasTaxista_View.Pages.Views
     }
 
 }
-

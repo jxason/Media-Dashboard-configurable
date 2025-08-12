@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace FinanzasTaxista_View.Pages.Views.ViajeCRUD
 {
-    [Authorize(Roles = "Taxista")]
+  
     public class EditarModel : PageModel
     {
         private readonly ViajeService _viajeService;

@@ -7,12 +7,12 @@ using FinanzasTaxista_View.Service;
 namespace FinanzasTaxista_View.Pages.Views
 {
    
-    public class IngresosViewModel : PageModel
+    public class IngresosViewAdminModel : PageModel
     {
         private readonly ViajeService _viajeService;
 
 
-        public IngresosViewModel(ViajeService viajeService)
+        public IngresosViewAdminModel(ViajeService viajeService)
         {
             _viajeService = viajeService;
         }
