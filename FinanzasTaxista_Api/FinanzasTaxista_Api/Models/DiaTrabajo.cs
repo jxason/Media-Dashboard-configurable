@@ -6,7 +6,7 @@ namespace FinanzasTaxista_Api.Models
     {
         [Key]
         public int id { get; set; }
-        public DateOnly fecha { get; set; }
+        public DateTime fecha { get; set; }
 
     }
 }

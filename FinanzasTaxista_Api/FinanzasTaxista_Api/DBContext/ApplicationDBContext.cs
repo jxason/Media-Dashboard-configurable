@@ -1,4 +1,5 @@
 ﻿
+using Finansastaxista_API.Models;
 using FinanzasTaxista_Api.Models;
 using Microsoft.EntityFrameworkCore;
 namespace FinanzasTaxista_Api.DBContext
@@ -19,6 +20,7 @@ namespace FinanzasTaxista_Api.DBContext
         public DbSet<Categoria> categoria { get; set; }
         public DbSet<Viaje> viaje { get; set; }
         public DbSet<Gasto> gasto { get; set; }
+        public DbSet<Dashboard> Dashboards { get; set; }
 
 
     }
