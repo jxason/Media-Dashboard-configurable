@@ -1,12 +1,41 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Daniel\\Documents\\GitHub\\Media-Dashboard-configurable\\FinanzasTaxista_Api\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\jsolo\\Programacion\\GitHubProjects\\MediaDashboardPro\\Media-Dashboard-configurable\\FinanzasTaxista_Api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0867274C-4168-45FD-BB92-FE8FAF4F5BB3}|FinanzasTaxista_Api\\FinanzasTaxista_Api.csproj|c:\\users\\jsolo\\programacion\\githubprojects\\mediadashboardpro\\media-dashboard-configurable\\finanzastaxista_api\\finanzastaxista_api\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0867274C-4168-45FD-BB92-FE8FAF4F5BB3}|FinanzasTaxista_Api\\FinanzasTaxista_Api.csproj|solutionrelative:finanzastaxista_api\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\jsolo\\Programacion\\GitHubProjects\\MediaDashboardPro\\Media-Dashboard-configurable\\FinanzasTaxista_Api\\FinanzasTaxista_Api\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "FinanzasTaxista_Api\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\jsolo\\Programacion\\GitHubProjects\\MediaDashboardPro\\Media-Dashboard-configurable\\FinanzasTaxista_Api\\FinanzasTaxista_Api\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "FinanzasTaxista_Api\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwBgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T23:17:31.91Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

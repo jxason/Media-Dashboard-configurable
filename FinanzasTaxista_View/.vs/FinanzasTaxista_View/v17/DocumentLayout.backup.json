@@ -1,10 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Daniel\\Documents\\GitHub\\Media-Dashboard-configurable\\FinanzasTaxista_View\\",
+  "WorkspaceRootPath": "C:\\Users\\jsolo\\Programacion\\GitHubProjects\\MediaDashboardPro\\Media-Dashboard-configurable\\FinanzasTaxista_View\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AD8C961A-AF67-4E94-AAA1-211A78A73C97}|FinanzasTaxista_View\\FinanzasTaxista_View.csproj|c:\\users\\daniel\\documents\\github\\media-dashboard-configurable\\finanzastaxista_view\\finanzastaxista_view\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD8C961A-AF67-4E94-AAA1-211A78A73C97}|FinanzasTaxista_View\\FinanzasTaxista_View.csproj|solutionrelative:finanzastaxista_view\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AD8C961A-AF67-4E94-AAA1-211A78A73C97}|FinanzasTaxista_View\\FinanzasTaxista_View.csproj|c:\\users\\jsolo\\programacion\\githubprojects\\mediadashboardpro\\media-dashboard-configurable\\finanzastaxista_view\\finanzastaxista_view\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD8C961A-AF67-4E94-AAA1-211A78A73C97}|FinanzasTaxista_View\\FinanzasTaxista_View.csproj|solutionrelative:finanzastaxista_view\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD8C961A-AF67-4E94-AAA1-211A78A73C97}|FinanzasTaxista_View\\FinanzasTaxista_View.csproj|c:\\users\\jsolo\\programacion\\githubprojects\\mediadashboardpro\\media-dashboard-configurable\\finanzastaxista_view\\finanzastaxista_view\\service\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD8C961A-AF67-4E94-AAA1-211A78A73C97}|FinanzasTaxista_View\\FinanzasTaxista_View.csproj|solutionrelative:finanzastaxista_view\\service\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD8C961A-AF67-4E94-AAA1-211A78A73C97}|FinanzasTaxista_View\\FinanzasTaxista_View.csproj|c:\\users\\jsolo\\programacion\\githubprojects\\mediadashboardpro\\media-dashboard-configurable\\finanzastaxista_view\\finanzastaxista_view\\pages\\dashboard.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD8C961A-AF67-4E94-AAA1-211A78A73C97}|FinanzasTaxista_View\\FinanzasTaxista_View.csproj|solutionrelative:finanzastaxista_view\\pages\\dashboard.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD8C961A-AF67-4E94-AAA1-211A78A73C97}|FinanzasTaxista_View\\FinanzasTaxista_View.csproj|c:\\users\\jsolo\\programacion\\githubprojects\\mediadashboardpro\\media-dashboard-configurable\\finanzastaxista_view\\finanzastaxista_view\\wwwroot\\css\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{AD8C961A-AF67-4E94-AAA1-211A78A73C97}|FinanzasTaxista_View\\FinanzasTaxista_View.csproj|solutionrelative:finanzastaxista_view\\wwwroot\\css\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD8C961A-AF67-4E94-AAA1-211A78A73C97}|FinanzasTaxista_View\\FinanzasTaxista_View.csproj|c:\\users\\jsolo\\programacion\\githubprojects\\mediadashboardpro\\media-dashboard-configurable\\finanzastaxista_view\\finanzastaxista_view\\pages\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD8C961A-AF67-4E94-AAA1-211A78A73C97}|FinanzasTaxista_View\\FinanzasTaxista_View.csproj|solutionrelative:finanzastaxista_view\\pages\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +30,75 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Daniel\\Documents\\GitHub\\Media-Dashboard-configurable\\FinanzasTaxista_View\\FinanzasTaxista_View\\Program.cs",
-              "RelativeDocumentMoniker": "FinanzasTaxista_View\\Program.cs",
-              "ToolTip": "C:\\Users\\Daniel\\Documents\\GitHub\\Media-Dashboard-configurable\\FinanzasTaxista_View\\FinanzasTaxista_View\\Program.cs",
-              "RelativeToolTip": "FinanzasTaxista_View\\Program.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB0AAAAlAAAAAAAAAA==",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\jsolo\\Programacion\\GitHubProjects\\MediaDashboardPro\\Media-Dashboard-configurable\\FinanzasTaxista_View\\FinanzasTaxista_View\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "FinanzasTaxista_View\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\jsolo\\Programacion\\GitHubProjects\\MediaDashboardPro\\Media-Dashboard-configurable\\FinanzasTaxista_View\\FinanzasTaxista_View\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "FinanzasTaxista_View\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACsAAADAFUShH98AwAoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-13T01:24:03.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DashboardService.cs",
+              "DocumentMoniker": "C:\\Users\\jsolo\\Programacion\\GitHubProjects\\MediaDashboardPro\\Media-Dashboard-configurable\\FinanzasTaxista_View\\FinanzasTaxista_View\\Service\\DashboardService.cs",
+              "RelativeDocumentMoniker": "FinanzasTaxista_View\\Service\\DashboardService.cs",
+              "ToolTip": "C:\\Users\\jsolo\\Programacion\\GitHubProjects\\MediaDashboardPro\\Media-Dashboard-configurable\\FinanzasTaxista_View\\FinanzasTaxista_View\\Service\\DashboardService.cs",
+              "RelativeToolTip": "FinanzasTaxista_View\\Service\\DashboardService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-28T20:18:22.7Z",
+              "WhenOpened": "2025-08-13T01:18:10.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DashBoard.css",
+              "DocumentMoniker": "C:\\Users\\jsolo\\Programacion\\GitHubProjects\\MediaDashboardPro\\Media-Dashboard-configurable\\FinanzasTaxista_View\\FinanzasTaxista_View\\wwwroot\\css\\DashBoard.css",
+              "RelativeDocumentMoniker": "FinanzasTaxista_View\\wwwroot\\css\\DashBoard.css",
+              "ToolTip": "C:\\Users\\jsolo\\Programacion\\GitHubProjects\\MediaDashboardPro\\Media-Dashboard-configurable\\FinanzasTaxista_View\\FinanzasTaxista_View\\wwwroot\\css\\DashBoard.css",
+              "RelativeToolTip": "FinanzasTaxista_View\\wwwroot\\css\\DashBoard.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-13T01:09:49.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dashboard.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\jsolo\\Programacion\\GitHubProjects\\MediaDashboardPro\\Media-Dashboard-configurable\\FinanzasTaxista_View\\FinanzasTaxista_View\\Pages\\Dashboard.cshtml.cs",
+              "RelativeDocumentMoniker": "FinanzasTaxista_View\\Pages\\Dashboard.cshtml.cs",
+              "ToolTip": "C:\\Users\\jsolo\\Programacion\\GitHubProjects\\MediaDashboardPro\\Media-Dashboard-configurable\\FinanzasTaxista_View\\FinanzasTaxista_View\\Pages\\Dashboard.cshtml.cs",
+              "RelativeToolTip": "FinanzasTaxista_View\\Pages\\Dashboard.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T01:08:26.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\jsolo\\Programacion\\GitHubProjects\\MediaDashboardPro\\Media-Dashboard-configurable\\FinanzasTaxista_View\\FinanzasTaxista_View\\Pages\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "FinanzasTaxista_View\\Pages\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\jsolo\\Programacion\\GitHubProjects\\MediaDashboardPro\\Media-Dashboard-configurable\\FinanzasTaxista_View\\FinanzasTaxista_View\\Pages\\Dashboard.cshtml",
+              "RelativeToolTip": "FinanzasTaxista_View\\Pages\\Dashboard.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-12T23:08:09.218Z",
               "EditorCaption": ""
             }
           ]
